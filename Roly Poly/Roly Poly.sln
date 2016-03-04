@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{9FB01586-40DE-6CB6-92A0-946314F5A605}") = "Roly Poly", "Assembly-CSharp.csproj", "{05A50FDE-894B-1F1E-8E69-E732411E156B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05A50FDE-894B-1F1E-8E69-E732411E156B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A50FDE-894B-1F1E-8E69-E732411E156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A50FDE-894B-1F1E-8E69-E732411E156B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A50FDE-894B-1F1E-8E69-E732411E156B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
