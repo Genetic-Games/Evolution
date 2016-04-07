@@ -11,10 +11,10 @@ public class GameController : MonoBehaviour
 	public int enemyStart = 40;
 	public int enemyMax = 100;
 	public float waitSpawnTime = 3.0f;
-	public float enemyScaleMin = 0.01f;
-	public float enemyScaleMax = 1.0f;
 	public float bufferSpace = 10.0f;
 	public float massDensity = 4.0f / Mathf.PI;
+	public float enemyScaleMin = 0.01f;
+	public float enemyScaleMax = 3.0f;
 
 	public bool debug = false;
 
@@ -91,6 +91,9 @@ public class GameController : MonoBehaviour
 		Vector3 playerScale = player.transform.localScale;
 		Vector3 playerPosition = player.transform.position;
 
+		float scaleMin = playerScale.x * enemyScaleMin;
+		float scaleMax = playerScale.x * enemyScaleMax;
+
 		float playerRadius = playerScale.x / 2.0f;
 		float enemyRadius;
 		bool playerCheck = false;
@@ -108,7 +111,7 @@ public class GameController : MonoBehaviour
 			enemyPosition.y = spawnPoint.y;
 
 			// Randomly select a scale that an enemy will generate at and use it for a circle
-			float scaleValue = Random.Range (enemyScaleMin, enemyScaleMax);
+			float scaleValue = Random.Range (scaleMin, scaleMax);
 			enemyScale.x = enemyScale.y = scaleValue;
 			enemyRadius = scaleValue / 2.0f;
 
