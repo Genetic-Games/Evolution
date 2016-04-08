@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 
 public class EnemyController : MonoBehaviour
@@ -8,10 +9,10 @@ public class EnemyController : MonoBehaviour
 	//public float growthMin = 0.0001f;
 	//public float growthMax = 0.0005f;
 
-	//public bool debug = true;
+	public bool debug = true;
 	//public bool debugGrowth = false;
-	public bool debugMovement = false;
-	public bool debugCollision = true;
+	//public bool debugMovement = false;
+	//public bool debugCollision = true;
 
 	private GameObject player;
 	private Rigidbody2D rbody;
@@ -24,9 +25,10 @@ public class EnemyController : MonoBehaviour
 	// Use this for initialization, determine enemy growth factor and speed factor
 	void Start ()
 	{
-		speed = Random.Range (speedMin, speedMax);
+		
+		speed = UnityEngine.Random.Range (speedMin, speedMax);
 
-		//growth = Random.Range (growthMin, growthMax);
+		//growth = UnityEngine.Random.Range (growthMin, growthMax);
 		//growthFactor = new Vector3 (growth, growth);
 
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -80,7 +82,7 @@ public class EnemyController : MonoBehaviour
 	{
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 
-		if (debugMovement)
+		if (debug)
 			Debug.Assert (enemies.Length > 0);
 
 		float thisEnemyRadius = transform.localScale.x / 2.0f;
@@ -119,7 +121,7 @@ public class EnemyController : MonoBehaviour
 			}
 		}
 
-		if (debugMovement)
+		if (debug)
 			Debug.Log ("Closest Target" + "\n" + "Target Distance: " + distanceToTarget + "\n" + "Target Position: " + target.transform.position + "\n" + "Target Scale: " + target.transform.localScale);
 
 		// Determine if this enemy should move toward or away from the target based on size, approach if target is smaller, otherwise retreat
@@ -138,26 +140,39 @@ public class EnemyController : MonoBehaviour
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		if (debugCollision)
-			Debug.Log ("Collision With Other Enemy Detected" + "\n" + "Other Object:" + "\n" + other.gameObject + "\n" +
-			"Other Tag: " + other.gameObject.tag + "\n" + "Other Mass: " + other.gameObject.GetComponent<Rigidbody2D> ().mass + "\n" + "Enemy Mass: " + rbody.mass);
+		if (debug) {
+			try {
+				Debug.Log ("Collision With Other Enemy Detected" + "\n" + "Other Object:" + "\n" + other.gameObject + "\n" +
+				"Other Tag: " + other.gameObject.tag + "\n" + "Other Mass: " + other.gameObject.GetComponent<Rigidbody2D> ().mass + "\n" + "Enemy Mass: " + rbody.mass);
+
+			} catch (NullReferenceException e) {
+				Debug.LogWarning ("Enemy Spawn Exception: " + e.ToString ());
+			}
+		}
 
 		// If an enemy is touched, see who is bigger
 		if (other.gameObject.tag == "Enemy") {
 
-			// If player has higher mass (and thus size), grow player and destroy enemy
-			if (rbody.mass > other.gameObject.GetComponent<Rigidbody2D> ().mass) {
+			try {
+				// If enemy has higher mass (and thus size) than other enemy, grow enemy and destroy other enemy
+				if (rbody.mass > other.gameObject.GetComponent<Rigidbody2D> ().mass) {
 
-				gameController.AbsorbGrowth (gameObject, other.gameObject);
-				gameController.EnemyDestroyed ();
-				Destroy (other.gameObject);
+					gameController.AbsorbGrowth (gameObject, other.gameObject);
+					gameController.EnemyDestroyed ();
+					Destroy (other.gameObject);
 
-				// If enemy has higher mass or equal mass (and thus size), grow enemy and destroy player
-			} else {
-				gameController.AbsorbGrowth (other.gameObject, gameObject);
-				gameController.EnemyDestroyed ();
-				Destroy (gameObject); 
+					// If enemies have equal mass (and thus size), destroy both, because why not
+				} else if (rbody.mass == other.gameObject.GetComponent<Rigidbody2D> ().mass) {
 
+					gameController.EnemyDestroyed ();
+					gameController.EnemyDestroyed ();
+					Destroy (other.gameObject);
+					Destroy (gameObject);
+
+					// If other enemy has greater mass (and thus size), then destroy enemy and grow other enemy (handled with other enemy script)
+				}
+			} catch (NullReferenceException e) {
+				Debug.LogWarning ("Enemy Spawn Exception: " + e.ToString ());
 			}
 		}
 	}

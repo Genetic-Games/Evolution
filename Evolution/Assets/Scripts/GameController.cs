@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class GameController : MonoBehaviour
 {
-	public GameObject player;
 	public GameObject enemy;
 	public GameObject background;
 
@@ -16,19 +16,41 @@ public class GameController : MonoBehaviour
 	public float enemyScaleMin = 0.01f;
 	public float enemyScaleMax = 3.0f;
 
+	public Text gameOverText;
+	public Text restartText;
+	public Text scoreText;
+	public Text highScoreText;
+
 	public bool debug = false;
 
+	private GameObject player;
+	private float highScore;
+	private float score;
+	private int count;
 	private bool gameOver;
-	private bool restart;
 	private int enemyCounter;
 	private float mapBorder;
 
 	// Use this for initialization
 	void Start ()
 	{
+		score = 0;
+		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
+		gameOverText.text = restartText.text = scoreText.text = "";
+		scoreText.text = "Score: " + score;
+
+		if (debug)
+			Debug.Log ("Current High Score: " + highScore);
+
+		if (highScore == 0.0f)
+			highScoreText.text = "";
+		else
+			highScoreText.text = "High Score: " + highScore;
+
+		player = GameObject.FindGameObjectWithTag ("Player");
 		enemyCounter = 0;
+		count = 1;
 		gameOver = false;
-		restart = false;
 
 		// SpawnPlayer (); -- Removed due to need for player tracking by enemies and camera
 
@@ -73,10 +95,8 @@ public class GameController : MonoBehaviour
 			if (enemyCounter < enemyMax)
 				GenerateEnemy ();
 
-			if (gameOver) {
-				restart = true;
+			if (gameOver)
 				break;
-			}
 		}
 	}
 
@@ -90,9 +110,6 @@ public class GameController : MonoBehaviour
 	{
 		Vector3 playerScale = player.transform.localScale;
 		Vector3 playerPosition = player.transform.position;
-
-		float scaleMin = playerScale.x * enemyScaleMin;
-		float scaleMax = playerScale.x * enemyScaleMax;
 
 		float playerRadius = playerScale.x / 2.0f;
 		float enemyRadius;
@@ -111,7 +128,7 @@ public class GameController : MonoBehaviour
 			enemyPosition.y = spawnPoint.y;
 
 			// Randomly select a scale that an enemy will generate at and use it for a circle
-			float scaleValue = Random.Range (scaleMin, scaleMax);
+			float scaleValue = Random.Range (enemyScaleMin, enemyScaleMax);
 			enemyScale.x = enemyScale.y = scaleValue;
 			enemyRadius = scaleValue / 2.0f;
 
@@ -172,8 +189,9 @@ public class GameController : MonoBehaviour
 		Rigidbody2D rbody = spawnedEnemy.GetComponent<Rigidbody2D> ();
 		rbody.useAutoMass = true;
 		spawnedEnemy.GetComponent<CircleCollider2D> ().density = massDensity;
-		spawnedEnemy.name = "Enemy " + Random.Range (1, 1000);
+		spawnedEnemy.name = "Enemy " + count;
 
+		count++;
 		enemyCounter++;
 
 		if (debug)
@@ -191,8 +209,14 @@ public class GameController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (restart) {
-			if (Input.GetKeyDown (KeyCode.Return) || Input.GetKeyDown (KeyCode.Space))
+		
+		if (gameOver) {
+			// If game is over and space is pressed, restart the game
+			if (Input.GetKeyDown (KeyCode.Space))
+				SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+
+			// If game is over and enter is pressed, load main menu -- TODO
+			if (Input.GetKeyDown (KeyCode.Return))
 				SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 		}
 	}
@@ -201,6 +225,14 @@ public class GameController : MonoBehaviour
 	public void GameOver ()
 	{
 		gameOver = true;
+		gameOverText.text = "Game Over";
+		restartText.text = "Press Space to Restart or Enter for Main Menu";
+
+		if (score > highScore) {
+			highScore = score;
+			PlayerPrefs.SetFloat ("High Score", highScore);
+			PlayerPrefs.Save ();
+		}
 	}
 
 	// Growth calculates the amount that source should grow by based on target's size
@@ -223,4 +255,13 @@ public class GameController : MonoBehaviour
 			"Winner Area Before: " + sourceArea + "\n" + "Loser Area: " + targetArea + "\n" + "Winner Area After: " + totalArea + "\n" + "Winner Radius After: " + newRadius);
 	}
 
+	// Adjust score, should be triggered when
+	public void ScoreIncrease (float val)
+	{
+		if (debug)
+			Debug.Log ("Score Increase" + "\n" + "Previous Score: " + score + "\n" + "Increase: " + Mathf.Round (val));
+
+		score += Mathf.Round (val);
+		scoreText.text = "Score: " + score;
+	}
 }

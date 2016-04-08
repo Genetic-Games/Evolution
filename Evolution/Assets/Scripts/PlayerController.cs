@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
-	public float speed = 25.0f;
+	public float speedFactor = 20.0f;
 	public float massDensity = 4.0f / Mathf.PI;
 
 	public bool debug = false;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
 		}
 
 		if (debug)
-			Debug.Log ("Player Settings" + "\n" + "Rigidbody2D: " + rbody + "\n" + "Speed: " + speed);
+			Debug.Log ("Player Settings" + "\n" + "Rigidbody2D: " + rbody + "\n" + "Speed: " + speedFactor);
 	}
 	
 	/* Update is called once per frame */
@@ -45,7 +45,10 @@ public class PlayerController : MonoBehaviour
 		float moveVertical = Input.GetAxis ("Vertical");
 
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
-		rbody.AddForce (speed * movement);
+
+		float speed = Mathf.Pow (rbody.mass, (2.0f / 3.0f));
+
+		rbody.AddForce (speedFactor * speed * movement);
 
 		if (debug) {
 			if (moveHorizontal != 0.0f)
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
 
 				gameController.AbsorbGrowth (gameObject, other.gameObject);
 				gameController.EnemyDestroyed ();
+				gameController.ScoreIncrease (other.gameObject.GetComponent<Rigidbody2D> ().mass * 100.0f);
 				Destroy (other.gameObject);
 
 				// If enemy has higher mass or equal mass (and thus size), grow enemy and destroy player
