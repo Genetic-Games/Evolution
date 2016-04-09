@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CameraController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyByBoundary.cs">
     <Files>
-      <File FileName="Assets\Scripts\EnemyController.cs" Line="27" Column="45" />
-      <File FileName="Assets\Scripts\CameraController.cs" Line="23" Column="53" />
-      <File FileName="Assets\Scripts\GameController.cs" Line="98" Column="29" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="26" Column="60" />
-      <File FileName="..\Space_Shooter\Assets\Scripts\DestroyByContact.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="24" Column="13" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="20" Column="26" />
+      <File FileName="Assets\Scripts\EnemyController.cs" Line="39" Column="38" />
+      <File FileName="Assets\Scripts\CameraController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="86" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
