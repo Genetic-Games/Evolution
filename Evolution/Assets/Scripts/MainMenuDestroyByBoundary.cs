@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyByBoundary : MonoBehaviour
+public class MainMenuDestroyByBoundary : MonoBehaviour
 {
-	public GameController gameController;
+	public MainMenuController mainController;
 
-	public bool debug = true;
+	public bool debug = false;
 
 	void OnTriggerExit2D (Collider2D other)
 	{
@@ -14,12 +14,11 @@ public class DestroyByBoundary : MonoBehaviour
 
 		GameObject gobj = other.gameObject;
 		if (gobj.tag == "Enemy") {
-			gameController.EnemyDestroyed ();
+			mainController.EnemyDestroyed ();
 			Destroy (gobj);
-		} else {
-			gameController.GameOver ();
-			gobj.SetActive (false);
+
 		}
+
 	}
 
 }
