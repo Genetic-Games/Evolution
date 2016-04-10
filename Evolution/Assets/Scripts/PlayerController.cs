@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
 	public float speedFactor = 20.0f;
 	public float massDensity = 4.0f / Mathf.PI;
+	public AudioSource eat;
 
 	public bool debug = false;
 
@@ -78,12 +79,14 @@ public class PlayerController : MonoBehaviour
 				gameController.AbsorbGrowth (gameObject, other.gameObject);
 				gameController.EnemyDestroyed ();
 				gameController.ScoreIncrease (other.gameObject.GetComponent<Rigidbody2D> ().mass * 100.0f);
+				eat.Play ();
 				Destroy (other.gameObject);
 
 				// If enemy has higher mass or equal mass (and thus size), grow enemy and destroy player
 			} else {
 				gameController.AbsorbGrowth (other.gameObject, gameObject);
 				gameController.GameOver ();
+				other.gameObject.GetComponent<AudioSource> ().Play ();
 				gameObject.SetActive (false);
 				//Destroy (gameObject);  -- Removed because it threw an error upon destroying the primary player
 			}

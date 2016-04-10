@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
 	public float speedMax = 10.0f;
 	//public float growthMin = 0.0001f;
 	//public float growthMax = 0.0005f;
+	public AudioSource eat;
 
 	public bool debug = true;
 	//public bool debugGrowth = false;
@@ -159,6 +160,11 @@ public class EnemyController : MonoBehaviour
 
 					gameController.AbsorbGrowth (gameObject, other.gameObject);
 					gameController.EnemyDestroyed ();
+
+					// Play eating sound only if the enemies are seen in a camera
+					if (gameObject.GetComponent<Renderer> ().isVisible || other.gameObject.GetComponent<Renderer> ().isVisible)
+						eat.Play ();
+
 					Destroy (other.gameObject);
 
 					// If enemies have equal mass (and thus size), destroy both, because why not
@@ -166,6 +172,11 @@ public class EnemyController : MonoBehaviour
 
 					gameController.EnemyDestroyed ();
 					gameController.EnemyDestroyed ();
+
+					// Play eating sound only if one of the enemies is seen in a camera
+					if (gameObject.GetComponent<Renderer> ().isVisible || other.gameObject.GetComponent<Renderer> ().isVisible)
+						eat.Play ();
+					
 					Destroy (other.gameObject);
 					Destroy (gameObject);
 
