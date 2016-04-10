@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
 	public Text restartText;
 	public Text scoreText;
 	public Text highScoreText;
+	public Text newHighScore;
 
 	public bool debug = false;
 
@@ -30,11 +31,15 @@ public class GameController : MonoBehaviour
 	private bool gameOver;
 	private int enemyCounter;
 	private float mapBorder;
+	private bool flashHighScore;
 
 	// Use this for initialization
 	void Start ()
 	{
 		score = 0;
+
+		flashHighScore = false;
+		newHighScore.text = "";
 		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
 		gameOverText.text = restartText.text = scoreText.text = "";
 		scoreText.text = "Score: " + score;
@@ -226,13 +231,37 @@ public class GameController : MonoBehaviour
 	{
 		gameOver = true;
 		gameOverText.text = "Game Over";
-		restartText.text = "Press Space to Restart or Enter for Main Menu";
 
 		if (score > highScore) {
+			flashHighScore = true;
 			highScore = score;
 			PlayerPrefs.SetFloat ("High Score", highScore);
 			PlayerPrefs.Save ();
+			highScoreText.text = "High Score: " + score;
+			newHighScore.text = "New High Score!";
 		}
+
+		StartCoroutine (flashScore ());
+		StartCoroutine (endGame ());
+	}
+
+	IEnumerator flashScore ()
+	{
+		while (flashHighScore && gameOver) {
+
+			newHighScore.color = Color.red;
+			yield return new WaitForSeconds (1.0f);
+			newHighScore.color = Color.white;
+			yield return new WaitForSeconds (1.0f);
+		}
+			
+	}
+
+	IEnumerator endGame ()
+	{
+		yield return new WaitForSeconds (3.0f);
+		restartText.text = "Press Space to restart or Enter for Main Menu";
+
 	}
 
 	// Growth calculates the amount that source should grow by based on target's size

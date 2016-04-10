@@ -1,15 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MainMenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameController.cs">
     <Files>
-      <File FileName="Assets\Scripts\GameController.cs" Line="3" Column="1" />
-      <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="17" Column="37" />
-      <File FileName="Assets\Scripts\EnemyController.cs" Line="16" Column="2" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="86" Column="28" />
+      <File FileName="Assets\Scripts\GameController.cs" Line="236" Column="26" />
+      <File FileName="Assets\Scripts\DestroyByBoundary.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyController.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MainMenuController.cs" Line="71" Column="2" />
-      <File FileName="Assets\Scripts\MainMenuDestroyByBoundary.cs" Line="19" Column="4" />
-      <File FileName="Assets\Scripts\MainMenuEnemyController.cs" Line="37" Column="24" />
+      <File FileName="Assets\Scripts\MainMenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuDestroyByBoundary.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MainMenuEnemyController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
