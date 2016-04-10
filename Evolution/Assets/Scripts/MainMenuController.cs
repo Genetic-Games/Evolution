@@ -19,6 +19,10 @@ public class MainMenuController : MonoBehaviour
 	public Text startText;
 
 	public bool debug = false;
+	public bool debugUI = true;
+
+	GameObject[] startObjects;
+	GameObject[] creditObjects;
 
 	private float highScore;
 	private int count;
@@ -41,6 +45,11 @@ public class MainMenuController : MonoBehaviour
 
 		enemyCounter = 0;
 		count = 1;
+
+		startObjects = GameObject.FindGameObjectsWithTag ("Start");
+		creditObjects = GameObject.FindGameObjectsWithTag ("Credits");
+
+		Credits (false);
 
 		// Ensure that the background components are equal (should be if a circle)
 		if (debug)
@@ -174,6 +183,33 @@ public class MainMenuController : MonoBehaviour
 		if (debug)
 			Debug.Log ("Collision Growth Detected" + "\n" + "Winner Radius Before: " + sourceRadius + "\n" + "Loser Radius: " + targetRadius + "\n" +
 			"Winner Area Before: " + sourceArea + "\n" + "Loser Area: " + targetArea + "\n" + "Winner Area After: " + totalArea + "\n" + "Winner Radius After: " + newRadius);
+	}
+
+	// Toggle whether to show the main menu screen or the credits screen based on user input (click on credits button)
+	public void Credits (bool displayCredits)
+	{
+		if (debugUI)
+			Debug.Log (displayCredits ? "Displaying Credits" : "Displaying Main Menu");
+
+		if (debugUI)
+			Debug.Log ("Main Menu Display Objects: " + startObjects + "\n" + "Credits Display Objects: " + creditObjects);
+
+		if (displayCredits) {
+
+			foreach (GameObject s in startObjects)
+				s.SetActive (false);
+
+			foreach (GameObject c in creditObjects)
+				c.SetActive (true);
+
+		} else {
+
+			foreach (GameObject c in creditObjects)
+				c.SetActive (false);
+
+			foreach (GameObject s in startObjects)
+				s.SetActive (true);
+		}
 	}
 		
 }
