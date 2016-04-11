@@ -185,14 +185,11 @@ public class MainMenuController : MonoBehaviour
 			"Winner Area Before: " + sourceArea + "\n" + "Loser Area: " + targetArea + "\n" + "Winner Area After: " + totalArea + "\n" + "Winner Radius After: " + newRadius);
 	}
 
-	// Toggle whether to show the main menu screen or the credits screen based on user input (click on credits button)
+	// Toggle whether to show the main menu screen or the credits screen based on user input (click on credits button), requires that all elements start as active so they can be found and toggled
 	public void Credits (bool displayCredits)
 	{
 		if (debugUI)
 			Debug.Log (displayCredits ? "Displaying Credits" : "Displaying Main Menu");
-
-		if (debugUI)
-			Debug.Log ("Main Menu Display Objects: " + startObjects + "\n" + "Credits Display Objects: " + creditObjects);
 
 		if (displayCredits) {
 
