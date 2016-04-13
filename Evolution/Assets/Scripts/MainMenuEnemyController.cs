@@ -7,7 +7,7 @@ public class MainMenuEnemyController : MonoBehaviour
 	public float speedMin = 1.0f;
 	public float speedMax = 10.0f;
 	public float massLimit = 100.0f;
-	public float RandomMitosisChance = 1.0f;
+	public float randomMitosisChance = 1.0f;
 
 	public bool debug = false;
 
@@ -46,7 +46,7 @@ public class MainMenuEnemyController : MonoBehaviour
 		}
 
 		// Perform Mitosis (splitting of cells) randomly above a minimum size and once a maximum size is reached
-		if (rbody.mass > massLimit || (UnityEngine.Random.Range (0.0f, 100.0f) <= RandomMitosisChance && transform.localScale.x > gameController.enemyScaleMin))
+		if (rbody.mass > massLimit || (UnityEngine.Random.Range (0.0f, 100.0f) <= randomMitosisChance && transform.localScale.x > gameController.enemyScaleMin))
 			Mitosis ();
 	}
 

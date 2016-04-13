@@ -6,6 +6,9 @@ public class EnemyController : MonoBehaviour
 {
 	public float speedMin = 1.0f;
 	public float speedMax = 10.0f;
+	public float scaleLimit = 3.0f;
+	// Number of times greater than the player
+	public float randomMitosisChance = 1.0f;
 	//public float growthMin = 0.0001f;
 	//public float growthMax = 0.0005f;
 	public AudioSource eat;
@@ -15,24 +18,26 @@ public class EnemyController : MonoBehaviour
 	//public bool debugMovement = false;
 	//public bool debugCollision = true;
 
+	private bool mitosisAllowed;
 	private GameObject player;
 	private Rigidbody2D rbody;
 	//private float growth;
 	private float speed;
 	//private Vector3 growthFactor;
-
+	private Vector3 origin = new Vector3 (0.0f, 0.0f);
 	private GameController gameController;
+	private GameObject background;
 
 	// Use this for initialization, determine enemy growth factor and speed factor
 	void Start ()
 	{
-		
 		speed = UnityEngine.Random.Range (speedMin, speedMax);
 
 		//growth = UnityEngine.Random.Range (growthMin, growthMax);
 		//growthFactor = new Vector3 (growth, growth);
 
 		player = GameObject.FindGameObjectWithTag ("Player");
+		background = GameObject.FindGameObjectWithTag ("Background");
 		rbody = GetComponent<Rigidbody2D> ();
 
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
@@ -42,6 +47,15 @@ public class EnemyController : MonoBehaviour
 		} else {
 			Debug.LogError ("Cannot find 'GameController' script.");
 		}
+
+		StartCoroutine (WaitForMitosis ());
+	}
+
+	// After a certain amount of time, allow mitosis to be performed after the object has spawned
+	IEnumerator WaitForMitosis ()
+	{
+		yield return new WaitForSeconds (UnityEngine.Random.Range (0.0f, 30.0f));
+		mitosisAllowed = true;
 	}
 	
 	// Update is called once per frame
@@ -49,6 +63,26 @@ public class EnemyController : MonoBehaviour
 	{
 		//Growth (); -- Removed due to growth being too large in combination with absorbing
 		MoveBasedOnTarget ();
+
+		// Ensure that no one leaves the boundary and if they do, they are destroyed
+		if (Vector3.Distance (transform.position, origin) > background.GetComponent<CircleCollider2D> ().radius * background.transform.localScale.x) {
+			gameController.EnemyDestroyed ();
+			Destroy (gameObject);
+		}
+
+		// Perform Mitosis (splitting of cells) randomly above a minimum size and once a maximum size is reached
+		float massLimit;
+		if (player == null || !player.activeInHierarchy)
+			massLimit = gameController.enemyMax * Mathf.Pow (scaleLimit, 2.0f);
+		else
+			massLimit = player.GetComponent<Rigidbody2D> ().mass * Mathf.Pow (scaleLimit, 2.0f);
+		
+		bool aboveMaxMass = rbody.mass > massLimit;
+		bool randomMitosis = UnityEngine.Random.Range (0.0f, 100.0f) <= randomMitosisChance;
+		bool aboveMinScale = transform.localScale.x > gameController.enemyScaleMin;
+
+		if (mitosisAllowed && (aboveMaxMass || (randomMitosis && aboveMinScale)))
+			Mitosis ();
 	}
 
 	// Grow (increase the scale and thus mass automatically) of the enemy each frame based on a random growth factor
@@ -174,5 +208,33 @@ public class EnemyController : MonoBehaviour
 				Debug.LogWarning ("Enemy Spawn Exception: " + e.ToString ());
 			}
 		}
+	}
+
+	// Split an enemy that is too large into two smaller enemies of equal size
+	void Mitosis ()
+	{
+		if (debug)
+			Debug.Log ("Mitosis Triggered" + "\n" + "Enemy: " + gameObject + "\n" + "Position: " + transform.position + "\n" + "Scale: " + transform.localScale.x);
+
+		// Set the spawn origin and radius (their spawn zone is a circle) for the two cells as the middle of the enemy before it is split
+		Vector3 spawnOrigin = transform.position;
+
+		float newScale = gameObject.GetComponent<CircleCollider2D> ().radius * transform.localScale.x;
+		float spawnDistance = newScale / 2.0f;
+		Vector3 newScaleVector = new Vector3 (newScale, newScale);
+
+		// Randomly choose where to spawn inside the old enemy's radius, choose the exact opposite way for the second spawn
+		Vector2 firstVector = UnityEngine.Random.insideUnitCircle.normalized * spawnDistance;
+		Vector3 firstVector3 = new Vector3 (firstVector.x, firstVector.y);
+		Vector3 secondVector3 = new Vector3 (firstVector.x * -1.0f, firstVector.y * -1.0f);
+
+		// Shrink the original before deleting it or spawning others so there are not any race conditions or collisions happening
+		transform.localScale = new Vector3 (gameController.enemyScaleMin / 100.0f, gameController.enemyScaleMin / 100.0f);
+
+		// Generate the two enemies (simulating a mitosis split) and delete the old one
+		gameController.GenerateEnemy (spawnOrigin + firstVector3, Quaternion.identity, newScaleVector);
+		gameController.GenerateEnemy (spawnOrigin + secondVector3, Quaternion.identity, newScaleVector);
+		gameController.EnemyDestroyed ();
+		Destroy (gameObject);
 	}
 }

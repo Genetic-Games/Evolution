@@ -100,7 +100,7 @@ public class GameController : MonoBehaviour
 			yield return new WaitForSeconds (waitSpawnTime);
 
 			if (enemyCounter < enemyMax)
-				GenerateEnemy ();
+				RandomlyGenerateEnemy ();
 
 			if (gameOver)
 				break;
@@ -110,10 +110,11 @@ public class GameController : MonoBehaviour
 	void StartSpawn ()
 	{
 		for (int i = 0; i < enemyStart; i++)
-			GenerateEnemy ();
+			RandomlyGenerateEnemy ();
 	}
 
-	void GenerateEnemy ()
+	// Randomly select a position, scale, velocity, and rotation to spawn an enemy inside of the map and a certain distance from the player
+	void RandomlyGenerateEnemy ()
 	{
 		Vector3 playerScale = player.transform.localScale;
 		Vector3 playerPosition = player.transform.position;
@@ -188,12 +189,27 @@ public class GameController : MonoBehaviour
 				continue;
 			}
 
+			if (WinCondition ())
+				break;
+
 			// Select a new random spawn point if this one is too near the player or the edge of the map (includes the size of the enemy)
 		} while (!playerCheck /*|| !enemyCheck */ || !mapCheck);
 
+		// Do not generate an enemy if the player has won
+		if (WinCondition ()) {
+			ScoreIncrease (player.GetComponent<Rigidbody2D> ().mass / 100.0f);
+			GameOver ();
+			gameOverText.text = "You Win!";
+		} else
+			GenerateEnemy (enemyPosition, Quaternion.identity, enemyScale);
+	}
+
+	// Create a publicly accessible function (for enemy Mitosis) that spawns an enemy
+	public void GenerateEnemy (Vector3 spawnPosition, Quaternion spawnRotation, Vector3 spawnScale)
+	{
 		// Generate the enemy and set its position, scale (rotation is 0), and mass automatically as based on density
-		var spawnedEnemy = Instantiate (enemy, enemyPosition, Quaternion.identity) as GameObject;
-		spawnedEnemy.transform.localScale = enemyScale;
+		var spawnedEnemy = Instantiate (enemy, spawnPosition, spawnRotation) as GameObject;
+		spawnedEnemy.transform.localScale = spawnScale;
 
 		Rigidbody2D rbody = spawnedEnemy.GetComponent<Rigidbody2D> ();
 		rbody.useAutoMass = true;
@@ -204,7 +220,7 @@ public class GameController : MonoBehaviour
 		enemyCounter++;
 
 		if (debug)
-			Debug.Log ("New Enemy Spawned" + "\n" + "Position: " + enemyPosition + "\n" + "Scale: " + enemyScale + "\n" + "Mass: " + rbody.mass);
+			Debug.Log ("New Enemy Spawned" + "\n" + "Position: " + spawnPosition + "\n" + "Scale: " + spawnScale + "\n" + "Mass: " + rbody.mass);
 
 		DebugLogEnemies ();
 	}
@@ -297,5 +313,17 @@ public class GameController : MonoBehaviour
 
 		score += Mathf.Round (val);
 		scoreText.text = "Score: " + score;
+	}
+
+	// Win if there is no more room to spawn enemies
+	bool WinCondition ()
+	{
+		float playerRadius = player.transform.localScale.x * player.GetComponent<CircleCollider2D> ().radius;
+		float backgroundRadius = background.transform.localScale.x * background.GetComponent<CircleCollider2D> ().radius;
+
+		if (playerRadius >= backgroundRadius - bufferSpace || (enemyCounter == 0 && count != 1))
+			return true;
+		else
+			return false;
 	}
 }
