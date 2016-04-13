@@ -45,7 +45,6 @@ public class MainMenuEnemyController : MonoBehaviour
 			Destroy (gameObject);
 		}
 
-
 		// Perform Mitosis (splitting of cells) randomly above a minimum size and once a maximum size is reached
 		if (rbody.mass > massLimit || (UnityEngine.Random.Range (0.0f, 100.0f) <= RandomMitosisChance && transform.localScale.x > gameController.enemyScaleMin))
 			Mitosis ();

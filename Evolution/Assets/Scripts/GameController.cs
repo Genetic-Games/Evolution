@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
 	public bool debug = false;
 
 	private GameObject player;
+	private CircleCollider2D playerCollider;
 	private float highScore;
 	private float score;
 	private int count;
@@ -53,6 +54,7 @@ public class GameController : MonoBehaviour
 			highScoreText.text = "High Score: " + highScore;
 
 		player = GameObject.FindGameObjectWithTag ("Player");
+		playerCollider = player.GetComponent<CircleCollider2D> ();
 		enemyCounter = 0;
 		count = 1;
 		gameOver = false;
@@ -115,8 +117,9 @@ public class GameController : MonoBehaviour
 	{
 		Vector3 playerScale = player.transform.localScale;
 		Vector3 playerPosition = player.transform.position;
+		CircleCollider2D enemyCollider = enemy.GetComponent<CircleCollider2D> ();
 
-		float playerRadius = playerScale.x / 2.0f;
+		float playerRadius = playerScale.x * playerCollider.radius;
 		float enemyRadius;
 		bool playerCheck = false;
 		bool mapCheck = false;
@@ -135,7 +138,7 @@ public class GameController : MonoBehaviour
 			// Randomly select a scale that an enemy will generate at and use it for a circle
 			float scaleValue = Random.Range (enemyScaleMin, enemyScaleMax);
 			enemyScale.x = enemyScale.y = scaleValue;
-			enemyRadius = scaleValue / 2.0f;
+			enemyRadius = scaleValue * enemyCollider.radius;
 
 			if (debug)
 				Debug.Log ("Enemy Spawn Attempt" + "\n" + "Position: " + enemyPosition + "\n" + "Scale: " + enemyScale + "\n");
@@ -159,11 +162,12 @@ public class GameController : MonoBehaviour
 				// Check for proximity to other enemies
 				foreach (GameObject e in enemies) {
 					spawnToEnemyDistance = Vector3.Distance (enemyPosition, e.transform.position);
-					enemyCheck = spawnToEnemyDistance > (e.transform.localScale.x / 2.0f) + enemyRadius + bufferSpace;
+					enemyCheck = spawnToEnemyDistance > (e.transform.localScale.x * e.GetComponent<CircleCollider2D> ().radius) + enemyRadius + bufferSpace;
 
 					if (!enemyCheck) {
 						if (debug)
-							Debug.LogWarning ("Enemy Spawn Failure" + "\n" + "Distance from Enemy: " + spawnToEnemyDistance + "\n" + "Old Enemy Radius: " + (e.transform.localScale.x / 2.0f) + "\n" +
+							Debug.LogWarning ("Enemy Spawn Failure" + "\n" + "Distance from Enemy: " + spawnToEnemyDistance + "\n" + 
+							"Old Enemy Radius: " + (e.transform.localScale.x * e.GetComponent<CircleCollider2D> ().radius) + "\n" +
 							"Spawn Enemy Radius: " + enemyRadius + "\n" + "Buffer Space: " + bufferSpace);
 						break;
 					}
@@ -267,8 +271,9 @@ public class GameController : MonoBehaviour
 	// Growth calculates the amount that source should grow by based on target's size
 	public void AbsorbGrowth (GameObject source, GameObject target)
 	{
-		float sourceRadius = source.transform.localScale.x / 2.0f;
-		float targetRadius = target.transform.localScale.x / 2.0f;
+		float sourceColliderRadius = source.GetComponent<CircleCollider2D> ().radius;
+		float sourceRadius = source.transform.localScale.x * sourceColliderRadius;
+		float targetRadius = target.transform.localScale.x * target.GetComponent<CircleCollider2D> ().radius;
 
 		float sourceArea = Mathf.PI * Mathf.Pow (sourceRadius, 2.0f);
 		float targetArea = Mathf.PI * Mathf.Pow (targetRadius, 2.0f);
@@ -276,7 +281,7 @@ public class GameController : MonoBehaviour
 
 		float newRadius = Mathf.Sqrt (totalArea / Mathf.PI);
 
-		Vector3 scale = new Vector3 (newRadius * 2.0f, newRadius * 2.0f);
+		Vector3 scale = new Vector3 (newRadius / sourceColliderRadius, newRadius / sourceColliderRadius);
 		source.transform.localScale = scale;
 
 		if (debug)
