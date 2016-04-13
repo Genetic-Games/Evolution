@@ -6,6 +6,7 @@ public class SplashController : MonoBehaviour
 {
 	public SpriteRenderer logo;
 	public float duration = 4.0f;
+	public float wait = 2.0f;
 
 	public bool debug = false;
 
@@ -87,14 +88,14 @@ public class SplashController : MonoBehaviour
 	// Once logo fades out completely, briefly wait before going to main menu
 	IEnumerator WaitThenComplete ()
 	{
-		yield return new WaitForSeconds (2.0f);
+		yield return new WaitForSeconds (wait);
 		fadeComplete = true;
 	}
 
 	// Briefly wait until starting to fade in the logo, purely aesthetic
 	IEnumerator WaitThenStart ()
 	{
-		yield return new WaitForSeconds (2.0f);
+		yield return new WaitForSeconds (wait);
 		fadeStart = true;
 		startTime = Time.time;
 	}

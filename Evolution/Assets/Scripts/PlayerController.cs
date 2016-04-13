@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
 		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
+		// Deemed as a good smooth function from low mass to high mass to represent the force applied for speed
 		float speed = Mathf.Pow (rbody.mass, (2.0f / 3.0f));
 
 		rbody.AddForce (speedFactor * speed * movement);

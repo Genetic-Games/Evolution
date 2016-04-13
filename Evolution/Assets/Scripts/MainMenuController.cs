@@ -51,16 +51,12 @@ public class MainMenuController : MonoBehaviour
 
 		Credits (false);
 
-		// Ensure that the background components are equal (should be if a circle)
-		if (debug)
-			Debug.Assert (background.transform.localScale.x == background.transform.localScale.y);
-
-		mapBorder = background.transform.localScale.x / 2.0f;
+		// Background should be a circle
+		mapBorder = background.GetComponent<CircleCollider2D> ().radius * background.transform.localScale.x;
 
 		DebugLogEnemies ();
 
 		StartCoroutine (spawnEnemies ());
-
 		StartCoroutine (startGame ());
 	}
 
@@ -95,7 +91,7 @@ public class MainMenuController : MonoBehaviour
 			yield return new WaitForSeconds (waitSpawnTime);
 
 			if (enemyCounter < enemyMax)
-				GenerateEnemy ();
+				RandomlyGenerateEnemy ();
 
 		}
 	}
@@ -103,10 +99,11 @@ public class MainMenuController : MonoBehaviour
 	void StartSpawn ()
 	{
 		for (int i = 0; i < enemyStart; i++)
-			GenerateEnemy ();
+			RandomlyGenerateEnemy ();
 	}
 
-	void GenerateEnemy ()
+	// Randomly determine spawn position, scale, and speed for new enemy, checking to make sure they are within the map and not on the player
+	void RandomlyGenerateEnemy ()
 	{
 		float enemyRadius;
 		bool mapCheck = false;
@@ -123,7 +120,7 @@ public class MainMenuController : MonoBehaviour
 			// Randomly select a scale that an enemy will generate at and use it for a circle
 			float scaleValue = Random.Range (enemyScaleMin, enemyScaleMax);
 			enemyScale.x = enemyScale.y = scaleValue;
-			enemyRadius = scaleValue / 2.0f;
+			enemyRadius = scaleValue * enemy.GetComponent<CircleCollider2D> ().radius;
 
 			if (debug)
 				Debug.Log ("Enemy Spawn Attempt" + "\n" + "Position: " + enemyPosition + "\n" + "Scale: " + enemyScale + "\n");
@@ -142,8 +139,15 @@ public class MainMenuController : MonoBehaviour
 		} while (!mapCheck);
 
 		// Generate the enemy and set its position, scale (rotation is 0), and mass automatically as based on density
-		var spawnedEnemy = Instantiate (enemy, enemyPosition, Quaternion.identity) as GameObject;
-		spawnedEnemy.transform.localScale = enemyScale;
+		GenerateEnemy (enemyPosition, Quaternion.identity, enemyScale);
+	}
+
+	// Public function of generate enemy, allows for Mitosis in enemy controller calculation
+	public void GenerateEnemy (Vector3 spawnPosition, Quaternion spawnRotation, Vector3 spawnScale)
+	{
+		// Generate the enemy and set its position, scale (rotation is 0), and mass automatically as based on density
+		var spawnedEnemy = Instantiate (enemy, spawnPosition, spawnRotation) as GameObject;
+		spawnedEnemy.transform.localScale = spawnScale;
 
 		Rigidbody2D rbody = spawnedEnemy.GetComponent<Rigidbody2D> ();
 		rbody.useAutoMass = true;
@@ -154,7 +158,7 @@ public class MainMenuController : MonoBehaviour
 		enemyCounter++;
 
 		if (debug)
-			Debug.Log ("New Enemy Spawned" + "\n" + "Position: " + enemyPosition + "\n" + "Scale: " + enemyScale + "\n" + "Mass: " + rbody.mass);
+			Debug.Log ("New Enemy Spawned" + "\n" + "Position: " + spawnPosition + "\n" + "Scale: " + spawnScale + "\n" + "Mass: " + rbody.mass);
 
 		DebugLogEnemies ();
 	}
@@ -168,8 +172,9 @@ public class MainMenuController : MonoBehaviour
 	// Growth calculates the amount that source should grow by based on target's size
 	public void AbsorbGrowth (GameObject source, GameObject target)
 	{
-		float sourceRadius = source.transform.localScale.x / 2.0f;
-		float targetRadius = target.transform.localScale.x / 2.0f;
+		float sourceColliderRadius = source.GetComponent<CircleCollider2D> ().radius;
+		float sourceRadius = source.transform.localScale.x * sourceColliderRadius;
+		float targetRadius = target.transform.localScale.x * target.GetComponent<CircleCollider2D> ().radius;
 
 		float sourceArea = Mathf.PI * Mathf.Pow (sourceRadius, 2.0f);
 		float targetArea = Mathf.PI * Mathf.Pow (targetRadius, 2.0f);
@@ -177,7 +182,7 @@ public class MainMenuController : MonoBehaviour
 
 		float newRadius = Mathf.Sqrt (totalArea / Mathf.PI);
 
-		Vector3 scale = new Vector3 (newRadius * 2.0f, newRadius * 2.0f);
+		Vector3 scale = new Vector3 (newRadius / sourceColliderRadius, newRadius / sourceColliderRadius);
 		source.transform.localScale = scale;
 
 		if (debug)

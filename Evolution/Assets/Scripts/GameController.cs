@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
 		if (debug)
 			Debug.Assert (background.transform.localScale.x == background.transform.localScale.y);
 
-		mapBorder = background.transform.localScale.x / 2.0f;
+		mapBorder = background.transform.localScale.x * background.GetComponent<CircleCollider2D> ().radius;
 
 		DebugLogEnemies ();
 

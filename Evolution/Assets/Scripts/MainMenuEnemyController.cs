@@ -6,22 +6,25 @@ public class MainMenuEnemyController : MonoBehaviour
 {
 	public float speedMin = 1.0f;
 	public float speedMax = 10.0f;
+	public float massLimit = 100.0f;
+	public float RandomMitosisChance = 1.0f;
 
 	public bool debug = false;
 
 	private Rigidbody2D rbody;
 	private float speed;
 
+	private Vector3 origin = new Vector3 (0.0f, 0.0f);
 	private MainMenuController gameController;
+	private GameObject background;
 
 	// Use this for initialization, determine enemy growth factor and speed factor
 	void Start ()
 	{
-
 		speed = UnityEngine.Random.Range (speedMin, speedMax);
 
 		rbody = GetComponent<Rigidbody2D> ();
-
+		background = GameObject.FindGameObjectWithTag ("Background");
 		GameObject gameControllerObject = GameObject.FindGameObjectWithTag ("GameController");
 
 		if (gameControllerObject != null) {
@@ -35,6 +38,17 @@ public class MainMenuEnemyController : MonoBehaviour
 	void Update ()
 	{
 		MoveBasedOnTarget ();
+
+		// Ensure that no one leaves the boundary and if they do, they are destroyed
+		if (Vector3.Distance (transform.position, origin) > background.GetComponent<CircleCollider2D> ().radius * background.transform.localScale.x) {
+			gameController.EnemyDestroyed ();
+			Destroy (gameObject);
+		}
+
+
+		// Perform Mitosis (splitting of cells) randomly above a minimum size and once a maximum size is reached
+		if (rbody.mass > massLimit || (UnityEngine.Random.Range (0.0f, 100.0f) <= RandomMitosisChance && transform.localScale.x > gameController.enemyScaleMin))
+			Mitosis ();
 	}
 
 	void MoveBasedOnTarget ()
@@ -42,17 +56,17 @@ public class MainMenuEnemyController : MonoBehaviour
 		GameObject[] enemies = GameObject.FindGameObjectsWithTag ("Enemy");
 
 		if (debug)
-			Debug.Assert (enemies.Length > 0);
+			Debug.Log ("Number of Enemies Found: " + enemies.Length);
 
-		float thisEnemyRadius = transform.localScale.x / 2.0f;
+		float thisEnemyRadius = transform.localScale.x * gameObject.GetComponent<CircleCollider2D> ().radius;
 
 		GameObject target;
 		float distanceToTarget;
 
-		// Player does not exist on main menu, set the target to the Origin
-		Vector3 origin = new Vector3 (0.0f, 0.0f);
-		distanceToTarget = Vector3.Distance (transform.position, origin) - thisEnemyRadius;
-		target = GameObject.FindGameObjectWithTag ("Background");
+		// Player does not exist on main menu, set the target to the first enemy
+		float firstEnemyRadius = enemies [0].transform.localScale.x * enemies [0].GetComponent<CircleCollider2D> ().radius;
+		distanceToTarget = Vector3.Distance (transform.position, enemies [0].transform.position) - firstEnemyRadius - thisEnemyRadius;
+		target = enemies [0];
 
 		// Search through all targets to find the closest one out of all enemies
 		foreach (GameObject enemy in enemies) {
@@ -62,7 +76,7 @@ public class MainMenuEnemyController : MonoBehaviour
 				continue;
 
 			// Find closest point distance between target and this enemy
-			float targetRadius = enemy.transform.localScale.x / 2.0f;
+			float targetRadius = enemy.transform.localScale.x * enemy.GetComponent<CircleCollider2D> ().radius;
 			float distanceBetweenObjects = Vector3.Distance (transform.position, enemy.transform.position) - thisEnemyRadius - targetRadius;
 
 			// If this object is closer than the target, make it the new target and update the distance to its closest point
@@ -77,13 +91,14 @@ public class MainMenuEnemyController : MonoBehaviour
 
 		// Determine if this enemy should move toward or away from the target based on size, approach if target is smaller, otherwise retreat
 		bool moveTowards;
-		if (target.transform.localScale.x < transform.localScale.x)
+
+		if (target.GetComponent<Rigidbody2D> ().mass < rbody.mass)
 			moveTowards = true;
 		else
 			moveTowards = false;
 
-		float mass = rbody.mass;
-		float massSpeedFactor = Mathf.Log (mass) + 2.5f;
+		// Log base 2 of mass + 2.5 chosen as most balanced value for both low mass and high mass speed to give a good sense of weight (could not use force function)
+		float massSpeedFactor = Mathf.Log (rbody.mass) + 2.5f;
 
 		// If larger, move away, otherwise move towards
 		transform.position = Vector2.MoveTowards (transform.position, target.transform.position, (Time.deltaTime * speed * (moveTowards ? 1.0f : -1.0f)) / massSpeedFactor);
@@ -112,19 +127,40 @@ public class MainMenuEnemyController : MonoBehaviour
 					gameController.EnemyDestroyed ();
 					Destroy (other.gameObject);
 
-					// If enemies have equal mass (and thus size), destroy both, because why not
-				} else if (rbody.mass == other.gameObject.GetComponent<Rigidbody2D> ().mass) {
-
-					gameController.EnemyDestroyed ();
-					gameController.EnemyDestroyed ();
-					Destroy (other.gameObject);
-					Destroy (gameObject);
-
-					// If other enemy has greater mass (and thus size), then destroy enemy and grow other enemy (handled with other enemy script)
+					// If enemies have equal mass (and thus size), do nothing
+					// If other enemy has greater or equal mass (and thus size), then destroy enemy and grow other enemy (handled with other enemy script)
 				}
 			} catch (NullReferenceException e) {
 				Debug.LogWarning ("Enemy Spawn Exception: " + e.ToString ());
 			}
 		}
+	}
+
+	// Split an enemy that is too large into two smaller enemies of equal size
+	void Mitosis ()
+	{
+		if (debug)
+			Debug.Log ("Mitosis Triggered" + "\n" + "Enemy: " + gameObject + "\n" + "Position: " + transform.position + "\n" + "Scale: " + transform.localScale.x);
+
+		// Set the spawn origin and radius (their spawn zone is a circle) for the two cells as the middle of the enemy before it is split
+		Vector3 spawnOrigin = transform.position;
+
+		float newScale = gameObject.GetComponent<CircleCollider2D> ().radius * transform.localScale.x;
+		float spawnDistance = newScale / 2.0f;
+		Vector3 newScaleVector = new Vector3 (newScale, newScale);
+
+		// Randomly choose where to spawn inside the old enemy's radius, choose the exact opposite way for the second spawn
+		Vector2 firstVector = UnityEngine.Random.insideUnitCircle.normalized * spawnDistance;
+		Vector3 firstVector3 = new Vector3 (firstVector.x, firstVector.y);
+		Vector3 secondVector3 = new Vector3 (firstVector.x * -1.0f, firstVector.y * -1.0f);
+
+		// Shrink the original before deleting it or spawning others so there are not any race conditions or collisions happening
+		transform.localScale = new Vector3 (gameController.enemyScaleMin / 100.0f, gameController.enemyScaleMin / 100.0f);
+
+		// Generate the two enemies (simulating a mitosis split) and delete the old one
+		gameController.GenerateEnemy (spawnOrigin + firstVector3, Quaternion.identity, newScaleVector);
+		gameController.GenerateEnemy (spawnOrigin + secondVector3, Quaternion.identity, newScaleVector);
+		gameController.EnemyDestroyed ();
+		Destroy (gameObject);
 	}
 }
