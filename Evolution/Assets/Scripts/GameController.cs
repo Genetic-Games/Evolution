@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
 	public float massDensity = 4.0f / Mathf.PI;
 	public float enemyScaleMin = 0.01f;
 	public float enemyScaleMax = 3.0f;
+	public float winSizeAsPercent = 0.5f;
 
 	public Text gameOverText;
 	public Text restartText;
@@ -321,7 +322,7 @@ public class GameController : MonoBehaviour
 		float playerRadius = player.transform.localScale.x * player.GetComponent<CircleCollider2D> ().radius;
 		float backgroundRadius = background.transform.localScale.x * background.GetComponent<CircleCollider2D> ().radius;
 
-		if (playerRadius >= backgroundRadius - bufferSpace || (enemyCounter == 0 && count != 1))
+		if (playerRadius >= (backgroundRadius - bufferSpace) * winSizeAsPercent || (enemyCounter == 0 && count != 1))
 			return true;
 		else
 			return false;
