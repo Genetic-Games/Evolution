@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
 	public float enemyScaleMin = 0.01f;
 	public float enemyScaleMax = 3.0f;
 	public float winSizeAsPercent = 0.5f;
+	public bool clearHighScore = false;
 
 	public Text gameOverText;
 	public Text restartText;
@@ -39,6 +40,9 @@ public class GameController : MonoBehaviour
 	void Start ()
 	{
 		score = 0;
+
+		if (clearHighScore)
+			PlayerPrefs.SetFloat ("High Score", 0.0f);
 
 		flashHighScore = false;
 		newHighScore.text = "";
@@ -245,6 +249,25 @@ public class GameController : MonoBehaviour
 			if (Input.GetKeyDown (KeyCode.Return))
 				SceneManager.LoadScene ("MainMenu");
 		}
+
+		NewHighScore ();
+	}
+
+	// Change the high score if the player surprasses it in the game
+	void NewHighScore ()
+	{
+		if (score > highScore) {
+			highScore = score;
+			PlayerPrefs.SetFloat ("High Score", highScore);
+			PlayerPrefs.Save ();
+			highScoreText.text = "High Score: " + score;
+			newHighScore.text = "New High Score!";
+
+			if (!flashHighScore)
+				StartCoroutine (FlashScore ());
+
+			flashHighScore = true;
+		}
 	}
 
 	// Call this function elsewhere when the game is over for any reason
@@ -253,22 +276,15 @@ public class GameController : MonoBehaviour
 		gameOver = true;
 		gameOverText.text = "Game Over";
 
-		if (score > highScore) {
-			flashHighScore = true;
-			highScore = score;
-			PlayerPrefs.SetFloat ("High Score", highScore);
-			PlayerPrefs.Save ();
-			highScoreText.text = "High Score: " + score;
-			newHighScore.text = "New High Score!";
-		}
-
-		StartCoroutine (flashScore ());
-		StartCoroutine (endGame ());
+		NewHighScore ();
+		StartCoroutine (EndGame ());
 	}
 
-	IEnumerator flashScore ()
+	IEnumerator FlashScore ()
 	{
-		while (flashHighScore && gameOver) {
+		yield return new WaitForEndOfFrame ();
+
+		while (flashHighScore) {
 
 			newHighScore.color = Color.red;
 			yield return new WaitForSeconds (1.0f);
@@ -278,7 +294,7 @@ public class GameController : MonoBehaviour
 			
 	}
 
-	IEnumerator endGame ()
+	IEnumerator EndGame ()
 	{
 		yield return new WaitForSeconds (3.0f);
 		restartText.text = "Press Space to restart or Enter for Main Menu";
