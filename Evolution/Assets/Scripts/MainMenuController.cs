@@ -21,8 +21,9 @@ public class MainMenuController : MonoBehaviour
 	public bool debug = false;
 	public bool debugUI = true;
 
-	GameObject[] startObjects;
-	GameObject[] creditObjects;
+	private GameObject[] startObjects;
+	private GameObject[] creditObjects;
+	private GameObject[] settingObjects;
 
 	private float highScore;
 	private int count;
@@ -38,9 +39,10 @@ public class MainMenuController : MonoBehaviour
 		if (debug)
 			Debug.Log ("Current High Score: " + highScore);
 
-		if (highScore == 0.0f)
+		if (highScore == 0.0f) {
 			highScoreText.text = "";
-		else
+			highScoreText.gameObject.SetActive (false);
+		} else
 			highScoreText.text = "High Score: " + highScore;
 
 		enemyCounter = 0;
@@ -48,8 +50,10 @@ public class MainMenuController : MonoBehaviour
 
 		startObjects = GameObject.FindGameObjectsWithTag ("Start");
 		creditObjects = GameObject.FindGameObjectsWithTag ("Credits");
+		settingObjects = GameObject.FindGameObjectsWithTag ("Settings");
 
 		Credits (false);
+		Settings (false);
 
 		// Background should be a circle
 		mapBorder = background.GetComponent<CircleCollider2D> ().radius * background.transform.localScale.x;
@@ -211,7 +215,47 @@ public class MainMenuController : MonoBehaviour
 
 			foreach (GameObject s in startObjects)
 				s.SetActive (true);
+
+			if (highScore == 0.0f)
+				highScoreText.gameObject.SetActive (false);
 		}
+	}
+
+	public void Settings (bool displaySettings)
+	{
+		if (debugUI)
+			Debug.Log (displaySettings ? "Displaying Settings" : "Displaying Main Menu");
+
+		if (displaySettings) {
+
+			foreach (GameObject s in startObjects)
+				s.SetActive (false);
+
+			foreach (GameObject e in settingObjects)
+				e.SetActive (true);
+		
+		} else {
+
+			foreach (GameObject e in settingObjects)
+				e.SetActive (false);
+
+			foreach (GameObject s in startObjects)
+				s.SetActive (true);
+
+			if (highScore == 0.0f)
+				highScoreText.gameObject.SetActive (false);
+		}
+	}
+
+	public void ResetHighScore ()
+	{
+		if (debugUI)
+			Debug.Log ("Resetting High Score to 0 from " + PlayerPrefs.GetFloat ("High Score"));
+
+		PlayerPrefs.SetFloat ("High Score", 0.0f);
+		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
+		highScoreText.text = "";
+		highScoreText.gameObject.SetActive (false);
 	}
 		
 }
