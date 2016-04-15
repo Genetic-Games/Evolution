@@ -257,5 +257,10 @@ public class MainMenuController : MonoBehaviour
 		highScoreText.text = "";
 		highScoreText.gameObject.SetActive (false);
 	}
+
+	public void ExitGame ()
+	{
+		Application.Quit ();
+	}
 		
 }

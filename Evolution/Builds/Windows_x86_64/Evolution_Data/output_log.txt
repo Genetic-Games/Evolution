@@ -1,0 +1,33 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     1008 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.036 seconds
+Platform assembly: C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\User\Repositories\genetic-games\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.713508 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.234415 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 403.
+Total: 0.302153 ms (FindLiveObjects: 0.018063 ms CreateObjectMapping: 0.009852 ms MarkObjects: 0.266436 ms  DeleteObjects: 0.006568 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1b28 -> priority: 1 
+  Thread -> id: ad0 -> priority: 1 
