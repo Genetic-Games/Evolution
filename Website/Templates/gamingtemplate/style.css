@@ -1,0 +1,276 @@
+body {
+    font-family: tahoma, helvetica, arial, sans-serif;
+    font-size: 10px;
+    text-align: center;
+    background: #5d5d5d url(images/page_bg.gif);
+    margin: 0px;
+    padding: 10px;
+}
+
+html, #wrapper, h1 {
+    margin: 0px;
+    padding: 0px;
+}
+
+img { border: 0px; }
+
+#wrapper {
+    margin: auto;
+    text-align: left;
+    width: 710px;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-size: 10px;
+}
+
+
+h1 {
+    line-height: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+h2 {
+    margin: 0px 0px 5px 0px;
+    padding: 0px;
+}
+
+h3 {
+    padding: 4px 0px 0px 0px;
+}
+
+.block {
+    display: block;
+}
+
+.clear {
+    clear: both;
+    height: 10px;
+}
+
+.left {
+    float: left;
+    margin: 5px 20px 0px 0px;
+}
+
+.right {
+    float: right;
+    margin: 0px 0px 0px 20px;
+}
+
+.box {
+	min-height: 107px;
+	/*border: 1px dashed red;*/
+}
+
+.imgbox {
+	height: 107px;
+	width: 143px;
+	float: right;
+}
+
+.readmore {
+    text-align: right;
+}
+
+ /* page structure */
+
+#wrapper {
+    background: url(images/body_t.gif) top no-repeat;
+    padding-top: 20px;
+}
+
+#body {
+    background: url(images/body_bg.gif) repeat-y;
+    padding-bottom: 10px;
+}
+
+#body p {
+    background: white;
+}
+#nav {
+    position: absolute;
+    top: 25px;
+    left: 253px;
+    width: 450px;
+	height:35px;
+	background: url(images/nav.gif) repeat-x;
+}
+#nav ul{
+	padding: 0px;
+	margin: 0px;
+	list-style-type: square;
+	list-style-position: inside;
+}
+#nav li{
+	padding: 7px 16px 0px 16px;
+	margin: 0px;
+	height:35px;
+	list-style-type: square;
+	list-style-position: inside;
+	float:left;
+	border-right: 1px solid #FFFFFF;
+	display:inline;
+}
+
+.lastchild{border-right: 0px none #FFFFFF !important;}
+
+#nav a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#nav a:hover{
+	color:#fcff85;
+}
+
+#current {
+    float: left;
+    width: 235px;
+    margin-left: 10px;
+    margin-top: -10px;
+    background: url(images/menu_bg.gif) repeat-y;
+    border-bottom: 1px solid #05256b;
+}
+
+* html #current {
+    margin-left: 5px;
+}
+
+#content {
+    float: right;
+    width: 450px;
+    padding-top: 40px;
+    margin-right: 8px;
+}
+
+* html #content {
+    margin-right: 4px;
+}
+
+#footer {
+    background: url(images/body_b.gif) no-repeat;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 480px;
+    padding-bottom: 30px;
+}
+
+#copyright {
+    position: relative;
+    top: -8px;
+    color: #989898;
+}
+
+/* current column */
+
+#current .nav {
+    margin: 21px 6px 5px 5px;
+}
+
+#current ul {
+    border: 1px solid #8497c2;
+    margin: 0px;
+    padding: 0px;
+}
+
+* html #current ul {
+    padding: 3px 0px;
+    padd\ing: 0px;
+}
+
+#current li {
+    list-style: none;
+    border: 1px solid #4e698f;
+    background: #01285f url(images/harry.gif) left center no-repeat;
+    padding: 0px 0px 0px 20px;
+    margin: 3px;
+}
+
+#current li.readmore {
+    text-align: right;
+    background-image: none;
+}
+
+#current ul a {
+    color: #beddff;
+    text-decoration: none;
+    display: block;
+    padding: 3px 12px 3px 0px;
+}
+
+* html #current ul a {
+    width: 100%;
+    w\idth: auto;
+}
+
+#current ul a:hover {
+    color: white;
+}
+
+#current .readmore {
+    padding: 3px 4px 4px 20px;
+}
+
+* html #current .readmore {
+    padding: 0px 4px 1px 20px;
+    padd\ing: 3px 4px 4px 20px;
+}
+
+#current .readmore a {
+    text-decoration: underline;
+    display: inline;
+}
+
+#currenttitle {
+    position: absolute;
+    left: 15px;
+    top: 409px;
+}
+
+* html #currenttitle {
+    top: 411px;
+}
+
+/* page content */
+
+#content h2 {
+    line-height: 1;
+    margin: 0px;
+    padding: 20px 0px 0px 0px;
+}
+
+#content h3 {
+	margin: 10px 0px;
+	padding: 0px;
+	text-transform: capitalize;
+}
+
+#content p {
+    margin: 10px 0px;
+    padding: 0px;    
+}
+
+#content .contentbox {
+    border: 1px solid #e1e1e1;
+    border-top: none;
+    padding: 5px 20px 10px 20px;
+}
+
+* html #content .contentbox {
+    padding-bottom: 11px;
+}
+
+#content, #content a {
+    color: #868686;
+}
+
+#content a:hover {
+    color: #000;
+}
