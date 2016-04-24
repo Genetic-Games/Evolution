@@ -1,35 +1,34 @@
 body {
-	background: url(../images/bg-body.jpg) repeat;
+	background: url(../Images/bg-body.jpg) repeat;
 	color: #727272;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 1;
 	margin: 0;
-	min-width: 960px;
+	min-width: 900px;
 	padding: 0;
 }
 #background {
-	background: url(../images/bg-page.jpg) no-repeat top center;
+	background: url(../Images/bg-page.jpg) no-repeat top center;
 	margin: 0;
 	padding: 0;
 }
 #header {
-	background: url(../images/bg-header2.png) repeat-x top center;
+	background: url(../Images/bg-header2.png) repeat-x top center;
 	margin: 0;
 	padding: 0;
 }
 #header > div {
-	background: url(../images/bg-header.png) no-repeat top center;
+	background: url(../Images/bg-header.png) no-repeat top center;
 	margin: 0;
 	padding: 0;
 }
 #header > div > div {
 	height: 150px;
+    min-width: 900px;
 	margin: 0 auto;
 	padding: 0 0 50px;
-	position: relative;
 	width: 50%;
-	z-index: 5;
 }
 #header a.logo {
 	display: flex;
@@ -41,27 +40,21 @@ body {
 	border: 0;
 }
 #header ul {
-	background: url(../images/bg-navigation.png) no-repeat center center;
-	justify-content: center;
-	bottom: 5%;
-	height: auto;
-	left: 0;
-	margin: 0 auto;
+	background: url(../Images/bg-navigation.png) no-repeat center center;
+	margin: 15px 0 0;
 	overflow: hidden;
-	padding: 10px 20px;
-	position: relative;
+	padding: 5px 20px;
 	width: 865px;
+    float: left;
 }
 #header ul li {
 	display: flex;
 	float: left;
-	justify-content: center;
-	list-style: none;
 	margin: 0 5px;
 	padding: 0;
 }
 #header ul li a {
-	background: url(../images/menu.png) no-repeat;
+	background: url(../Images/menu.png) no-repeat;
 	color: #a8a8a8;
 	display: flex;
 	font-family: 'Philosopher-Bold';
@@ -112,10 +105,11 @@ body {
 	background-position: -669px -113px;
 }
 #body {
-	background: url(../images/bg-body-header.png) no-repeat top center;
+	background: url(../Images/bg-body-header.png) no-repeat top center;
 	margin: 0 auto;
-	padding: 5% 0 0;
-	max-width: 50%;
+	padding: 1.8% 0 0;
+	width: 50%;
+    display: flex;
 }
 #body p {
 	margin: 0;
@@ -128,12 +122,12 @@ body {
 	color: #a3a3a3;
 }
 #body > div {
-	background: url(../images/bg-body-footer.png) no-repeat bottom center;
-	margin: 0;
-	padding: 0 0 12%;
+	background: url(../Images/bg-body-footer.png) no-repeat bottom center;
+	margin: 1% 0 0;
+	padding: 0 0 5%;
 }
 #body > div > div {
-	background: url(../images/bg-body2.png) repeat-y top center;
+	background: url(../Images/bg-body2.png) repeat-y top center;
 	min-height: 400px;
 	margin: 0;
 	padding: 0;
@@ -151,24 +145,23 @@ body {
 	height: 96%;
 	padding: 2%;
 	position: relative;
-	z-index: 1;
 }
 #body div div .section {
-	background: #0a0a0a url(../images/gradient.png) repeat-x bottom center;
+	background: #0a0a0a url(../Images/gradient.png) repeat-x bottom center;
 	margin: 0 auto;
 	overflow: auto;
 	padding: 2%;
 	width: auto;
 }
 #body div div .section > div {
-	background: url(../images/border.gif) repeat-x top left;
+	background: url(../Images/border.gif) repeat-x top left;
 	float: left;
 	margin: 0;
 	padding: 0;
 	width: auto;
 }
 #body div div .section div h4 {
-	background: #070707 url(../images/gradient2.png) repeat-x top center;
+	background: #070707 url(../Images/gradient2.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #fff;
 	font-size: 14px;
@@ -188,13 +181,13 @@ body {
 #body div div .section div div p {
 	line-height: 24px;
 	margin: 0;
-	padding: 0;
+	padding: 5px 0;
 }
 #body div div .section div div p a {
 	color: #727272;
 }
-#body div div .section div div p a.more {
-	background: url(../images/bg-more.png) no-repeat center center;
+#body div div .section a.more {
+	background: url(../Images/bg-more.png) no-repeat center center;
 	color: #bababa;
 	display: block;
 	height: auto;
@@ -204,7 +197,7 @@ body {
 	margin: 5px;
 	padding: 1px;
 	text-align: center;
-	text-decoration: underline;
+	text-decoration: none;
 	text-transform: none;
 	width: auto;
 }
@@ -212,13 +205,13 @@ body {
 	color: #a3a3a3;
 }
 #body div div .section div div p a.more:hover {
-	background: url(../images/bg-more-hover.png) no-repeat center center;
+	background: url(../Images/bg-more-hover.png) no-repeat center center;
 	color: #bababa;
 }
 #body div div .section div h3 {
-	background: #070707 url(../images/gradient3.png) repeat-x top center;
+	background: #070707 url(../Images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
-	color: #fff;
+	color: #ffffff;
 	font-family: 'Philosopher-Bold';
 	font-size: 16px;
 	font-weight: normal;
@@ -226,6 +219,7 @@ body {
 	letter-spacing: 0.07em;
 	line-height: 50px;
 	text-align: center;
+    text-decoration: none;
 	margin: 0;
 	padding: 0;
 	text-transform: uppercase;
@@ -244,7 +238,7 @@ body {
 	display: block;
 }
 #body div div .section div div span {
-	background: #181a1a url(../images/gradient4.png) repeat-x bottom left;
+	background: #181a1a url(../Images/gradient4.png) repeat-x bottom left;
 	border-bottom: 1px solid #22272a;
 	border-left: 1px solid #22272a;
 	border-right: 1px solid #22272a;
@@ -264,59 +258,67 @@ body {
 #body div div .section div div span a:hover {
 	color: #fff;
 }
-#body .media, #body .games, #body .about, #body .news {
+#body .media, #body .news {
 	margin: 0;
-	padding: 24px 0;
+	padding: 0;
 }
 #body .media > div {
 	margin: 0;
 	overflow: hidden;
-	padding: 0 10px;
+	padding: 0;
 }
-#body .media > div > div {
-	background: url(../images/border.gif) repeat-x top left;
-	float: left;
-	margin: 0 10px;
-	padding: 3px 0 0;
-	width: 450px;
+#body .media h2 {
+	background: url(../Images/gradient2.png) repeat-x top center;
+	margin: 0 0 10px;
+	padding: 0;
+    color: #ffffff;
+    font-family: 'Philospher-Bold';
+    text-align: center;
+    font-size: 24px;
+    height: 50px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    line-height: 50px;
 }
 #body .media h3 {
-	background: #070707 url(../images/gradient3.png) repeat-x top center;
+	background: #070707 url(../Images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
-	color: #fff;
+	color: #ffffff;
 	font-family: 'Philosopher-Bold';
 	font-size: 16px;
 	font-weight: normal;
 	height: 50px;
 	letter-spacing: 0.07em;
 	line-height: 50px;
-	margin: 0 0 1px;
-	padding: 0 19px;
+	margin: 0;
+	padding: 0;
 	text-transform: uppercase;
 	text-align: center;
 }
+#body .media img {
+    position: inline;
+    float: left;
+    padding: 0 10px 10px 0;
+    max-height: 200px;
+    max-width: 200px;
+}
+#body .media p {
+    position: inline;
+	line-height: 18px;
+	padding: 10px;
+}
 #body .media ul {
-	background: #181818;
-	border: 1px solid #22272a;
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
 }
 #body .media ul li {
-	list-style: none;
-	margin: 0;
+    list-style: none;
+    background: #181818;
+    border: 0px solid #22272a;
+	margin: 0 0 10px;
 	padding: 0;
-}
-#body .media div div ul {
-	padding: 8px;
-}
-#body .media div div ul li {
-	border: 1px solid #22272a;
-	display: block;
-	float: left;
-	margin: 8px 10px;
-	padding: 0;
-	width: 194px;
+    min-height: 275px;
 }
 #body .media div div ul li a.figure {
 	display: block;
@@ -330,184 +332,71 @@ body {
 	border: 1px solid #000;
 	display: block;
 }
-#body .media div div ul li span {
-	background: #181a1a url(../images/gradient4.png) repeat-x bottom left;
-	border-top: 1px solid #22272a;
-	display: block;
-	height: 38px;
-}
-#body .media div div ul li span a {
-	color: #a7a9ac;
-	display: block;
-	font-size: 12px;
-	line-height: 38px;
-	margin: 0;
-	padding: 0 9px;
-	text-align: center;
-	text-decoration: none;
-}
-#body .media div div ul li span a:hover {
-	color: #fff;
-}
-#body .media .article {
-	background: url(../images/border.gif) repeat-x top left;
-	margin: 17px auto 0;
-	padding: 3px 0 0;
-	width: 920px
-}
-#body .media .article ul {
-	padding: 0 10px;
-}
-#body .media .article ul li {
-	display: block;
-	float: left;
-	margin: 0 9px;
-	overflow: hidden;
-	padding: 0 0 10px;
-	width: 430px;
-}
-#body .media .article ul li a.figure {
-	border: 1px solid #22272a;
-	float: left;
-	display: block;
-	margin: 19px 13px 0 0;
-	padding: 0;
-}
-#body .media .article ul li a.figure:hover {
-	opacity: 0.8;
-}
-#body .media .article ul li a.figure img {
-	border: 1px solid #000;
-	display: block;
-}
-#body .media .article ul li p {
-	font-size: 12px;
-	line-height: 24px;
-	padding: 13px 0 0;
-}
-#body .media .article ul li p a {
-	color: #727272;
-}
-#body .media .article ul li p a:hover {
-	color: #a3a3a3;
-}
 #body .games {
 	overflow: hidden;
 }
-#body .games div {
-	margin: 0;
-	padding: 0;
-}
 #body .games h3 {
-	background: #070707 url(../images/gradient3.png) repeat-x top center;
+	background: #070707 url(../Images/gradient3.png) repeat-x top left;
 	border: 1px solid #22272a;
-	color: #fff;
+	color: #ffffff;
 	font-family: 'Philosopher-Bold';
-	font-size: 16px;
-	font-weight: normal;
 	height: 50px;
 	letter-spacing: 0.07em;
 	line-height: 50px;
-	margin: 0 0 1px;
-	padding: 0 19px;
+	margin: 10px;
+	padding: 0;
 	text-transform: uppercase;
 	text-align: center;
 }
-#body .games div ul {
+#body .games .content {
+	background: url(../Images/border.gif) repeat-x top left;
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+#body .games ul {
 	background: #181818;
 	border: 1px solid #22272a;
-	margin: 0;
-	padding: 0;
+	margin: 10px;
+    padding: 15px 15px 0;
 }
-#body .games div ul li {
+#body .games ul li {
 	border: 1px solid #22272a;
 	list-style: none;
-	margin: 0;
+	margin: 0 0 20px;
 	padding: 0;
 }
-#body .games div ul li a.figure {
+#body .games ul li a.figure {
 	display: block;
 	margin: 0;
 	padding: 0;
 }
-#body .games div ul li a.figure:hover {
+#body .games ul li a.figure:hover {
 	opacity: 0.8;
 }
-#body .games div ul li a.figure img {
+#body .games ul li a.figure img {
 	border: 1px solid #000;
-	display: block;
+    display: flex;
 }
-#body .games div ul li span {
-	background: #181a1a url(../images/gradient3.png) repeat-x bottom left;
+#body .games ul li span {
+	background: #181a1a url(../Images/gradient3.png) repeat-x bottom left;
 	border-top: 1px solid #22272a;
 	display: block;
 }
-#body .games div ul li span a {
+#body .games ul li span a {
 	color: #a7a9ac;
 	display: block;
 	margin: 0;
 	padding: 0 9px;
 	text-decoration: none;
 }
-#body .games div ul li span a:hover {
-	color: #fff;
+#body .games ul li span a:hover {
+	color: #ffffff;
 }
-#body .games .content {
-	background: url(../images/border.gif) repeat-x top left;
-	float: left;
-	margin: 0 0 0 19px;
-	padding: 3px 0 0;
-	width: 470px;
-}
-#body .games .content ul {
-	padding: 16px 19px 1px;
-}
-#body .games .content ul li {
-	margin: 0 0 20px;
-}
-#body .games .content ul li span a {
+#body .games .content span a {
 	font-size: 14px;
-	height: 48px;
-	line-height: 48px;
-}
-#body .games .aside {
-	background: url(../images/border.gif) repeat-x top left;
-	float: left;
-	margin: 0 0 0 30px;
-	padding: 3px 0 0;
-	width: 420px;
-}
-#body .games .aside ul {
- *min-height: 568px;
-	overflow: hidden;
-	padding: 5px 8px 11px;
-}
-#body .games .aside ul li {
-	float: left;
-	margin: 11px 10px;
-	width: 178px;
-}
-#body .games .aside ul li span a {
-	font-size: 12px;
-	height: 38px;
-	line-height: 38px;
-	text-align: center;
-}
-#body .games .article {
-	clear: both;
-	float: left;
-	width: 960px;
-}
-#body .games .article p {
-	font-size: 12px;
-	line-height: 24px;
-	padding: 11px 20px 0;
-}
-#body .games .article p a {
-	color: #797979;
-}
-#body .games .article p a:hover {
-	color: #a3a3a3;
+    text-align: center;;
+	line-height: 40px;
 }
 #body .about {
 	overflow: hidden;
@@ -517,13 +406,13 @@ body {
 	padding: 0;
 }
 #body .about ul li {
-	background: url(../images/border.gif) repeat-x top left;
+	background: url(../Images/border.gif) repeat-x top left;
 	list-style: none;
-	margin: 0 0 20px;
-	padding: 3px 0 0;
+	margin: 10px 0;
+	padding: 0;
 }
 #body .about ul li h3 {
-	background: #070707 url(../images/gradient3.png) repeat-x top center;
+	background: #070707 url(../Images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
 	color: #fff;
 	font-family: 'Philosopher-Regular';
@@ -532,19 +421,18 @@ body {
 	height: 55px;
 	line-height: 55px;
 	margin: 0 0 1px;
-	padding: 0 19px;
+	padding: 0 20px;
 	text-transform: capitalize;
 }
 #body .about ul li div {
 	background: #181818;
 	border: 1px solid #22272a;
 	margin: 0;
-	min-height: 250px;
-	padding: 11px 19px;
+	padding: 10px 10px 0 10px;
 }
 #body .about ul li div p {
 	line-height: 24px;
-	padding: 0 0 28px;
+	padding: 0 0 18px;
 }
 #body .about ul li div p span {
 	font-size: 16px;
@@ -556,15 +444,8 @@ body {
 }
 #body .about .content {
 	float: left;
-	margin: 0 0 0 20px;
+	margin: 0 10px;
 	padding: 0;
-	width: 560px;
-}
-#body .about .aside {
-	float: left;
-	margin: 0 0 0 20px;
-	padding: 0;
-	width: 340px;
 }
 #body .news {
 	overflow: hidden;
@@ -575,38 +456,37 @@ body {
 }
 #body .news ul li {
 	list-style: none;
-	margin: 0;
+	margin: 10px;
 	padding: 0;
 }
 #body .news .content {
-	background: url(../images/border.gif) repeat-x top left;
+	background: url(../Images/border.gif) repeat-x top left;
 	float: left;
-	margin: 0 0 0 20px;
-	padding: 3px 0 0;
-	width: 610px;
+	margin: 0 10px;
+	padding: 0;
 }
 #body .news .content ul li {
-	padding: 0 0 20px;
+	padding: 0 0 5px;
 }
 #body .news .content ul li .header {
-	background: #070707 url(../images/gradient5.png) repeat-x top center;
+	background: #070707 url(../Images/gradient5.png) repeat-x top center;
 	border: 1px solid #22272a;
-	color: #fff;
+	color: #ffffff;
 	font-size: 14px;
 	line-height: 24px;
 	margin: 0 0 1px;
 	overflow: hidden;
-	padding: 10px 18px 15px;
+	padding: 10px;
 }
-#body .news .content ul li .header b {
-	display: inline;
-	float:left;
+#body .news .content .header b, #body .news .content .header i {
+	display: block;
+	text-align: center;
 	line-height: 24px;
 	margin: 0;
 	padding: 0;
 }
 #body .news .content ul li .header b a {
-	color: #fff;
+	color: #ffffff;
 }
 #body .news .content ul li .header b a:hover {
 	color: #727272;
@@ -615,19 +495,18 @@ body {
 	background: #181818;
 	border: 1px solid #22272a;
 	border-radius: 4px;
-	display: inline;
-	float: left;
-	margin: 0 0 0 34px;
+	display: block;
+	float: right;
+	margin: 0;
 	overflow: hidden;
 	padding: 0;
+    height: 20px;
+    width: 100px;
 }
-#body .news .content ul li .header span a {
+#body .news .content ul li .header a {
 	color: #bababa;
 	display: block;
-	float: left;
-	font-size: 10px;
-	height: 23px;
-	line-height: 23px;
+	float: right;
 	margin: 0;
 	padding: 0 15px;
 	text-align: center;
@@ -643,15 +522,15 @@ body {
 #body .news .content ul li .article {
 	background: #181818;
 	border: 1px solid #22272a;
-	margin: 0;
+	margin: 0 0 5px;
 	overflow: hidden;
-	padding: 14px 19px 19px;
+	padding: 0 20px;
 }
 #body .news .content ul li .article a.figure {
 	border: 1px solid #22272a;
 	display: block;
 	float: left;
-	margin: 6px 20px 0 0;
+	margin: 0 0 10px;
 	padding: 0;
 }
 #body .news .content ul li .article a.figure:hover {
@@ -663,34 +542,35 @@ body {
 }
 #body .news .content ul li .article p {
 	line-height: 24px;
+    padding: 5px 0;
 }
 #body .news .content ul li .article p a.more {
-	background: url("../images/bg-more.png") no-repeat center center;
+	background: url(../Images/bg-more.png) no-repeat center center;
 	color: #bababa;
-	display: inline-block;
+	display: block;
+	height: auto;
 	font-size: 10px;
 	font-weight: normal;
-	height: 23px;
-	line-height: 22px;
-	margin: 0;
-	padding: 0;
+	line-height: 24px;
+	margin: 5px;
+	padding: 1px;
 	text-align: center;
 	text-decoration: none;
-	text-transform: lowercase;
-	width: 70px;
+	text-transform: none;
+	width: auto;
 }
 #body .news .content ul li .article p a.more:hover {
 	color: #fff;
 }
 #body .news .sidebar {
-	background: url(../images/border.gif) repeat-x top left;
+	background: url(../Images/border.gif) repeat-x top left;
 	float: left;
 	margin: 0 0 0 30px;
 	padding: 3px 0 0;
 	width: 280px;
 }
 #body .news .sidebar div {
-	background: #070707 url(../images/gradient3.png) repeat-x top center;
+	background: #070707 url(../Images/gradient3.png) repeat-x top center;
 	border: 1px solid #22272a;
 	height: 48px;
 	margin: 0 0 1px;
@@ -705,7 +585,7 @@ body {
 	width: 107px;
 }
 #body .news .sidebar div span:first-child {
-	background: url(../images/border2.gif) repeat-y right top;
+	background: url(../Images/border2.gif) repeat-y right top;
 }
 #body .news .sidebar div span a {
 	color: #727272;
@@ -733,7 +613,7 @@ body {
 	background: #181818;
 }
 #body .news .sidebar ul li {
-	background: url(../images/border2.gif) repeat-x top left;
+	background: url(../Images/border2.gif) repeat-x top left;
 	padding: 9px 19px 11px;
 }
 #body .news .sidebar ul li:first-child {
@@ -778,43 +658,53 @@ body {
 	color: #fff;
 }
 #footer {
-	background: url(../images/bg-footer2.png) repeat-x bottom left;
+	background: url(../Images/bg-footer2.png) repeat-x bottom left;
 	margin: 0;
 	padding: 0;
 }
 #footer > div {
-	background: url(../images/bg-footer.png) no-repeat bottom center;
+	background: url(../Images/bg-footer.png) no-repeat bottom center;
 	margin: 0;
 	text-align: center;
-	padding: 10% 0 0;
+	padding: 6% 0 0;
 	display: block;
+}
+#footer #brand {
+    background: url(../Images/gg_pattern.png) no-repeat center center;
+    padding: 50px 0 0;
+    margin: 5px 0;
 }
 #footer ul {
 	padding: 0;
 	overflow: hidden;
 	display: inline-block;
-	margin: 30px auto;
+	margin: 20px 0 40px;
 }
 #footer ul li {
-	display: block;
+    background: url(../Images/icons.png) no-repeat center;
 	float: left;
-	padding: 0;
 	list-style: none;
-	margin: 0 22px;
 }
 #footer ul li a {
-	color: #fff;
-	display: block;
-	line-height: 73 px;
-	height: 73px;
+	color: #bababa;
+    text-align: center;
+    line-height: 7em;
 	text-decoration: none;
-	width: 73px;
+    margin: 0 25px;
+    width: 75px;
+    height: 70px;
+    padding: 3px;
+    display: block;
+    font-size: 10px;
+}
+#footer ul li a:hover {
+    color: #ffffff;
 }
 #footer p {
-	color: #4e5151;
-	font-size: 14px;
+	color: #ffffff;
+	font-size: 12px;
 	margin: 0;
-	padding: 10px;
+	padding: 3px;
 	text-align: center;
 	text-transform: none;
 }
