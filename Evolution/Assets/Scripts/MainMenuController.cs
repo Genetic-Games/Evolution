@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
 	public GameObject enemy;
 	public GameObject background;
+	public GameObject volumeSlider;
 
 	public int enemyStart = 200;
 	public int enemyMax = 1000;
@@ -20,12 +21,14 @@ public class MainMenuController : MonoBehaviour
 
 	public bool debug = false;
 	public bool debugUI = true;
+	public bool debugSound = true;
 
 	private GameObject[] startObjects;
 	private GameObject[] creditObjects;
 	private GameObject[] settingObjects;
 
 	private float highScore;
+	private float volume;
 	private int count;
 	private int enemyCounter;
 	private float mapBorder;
@@ -33,7 +36,9 @@ public class MainMenuController : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		startText.text = "";
+		// Initialize the volume and default it to 50% if the player has not changed it
+		VolumeStart ();
+
 		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
 
 		if (debug)
@@ -48,12 +53,15 @@ public class MainMenuController : MonoBehaviour
 		enemyCounter = 0;
 		count = 1;
 
+		// Grab all UI objects and use their tags to sort them, requires that all objects start off active
 		startObjects = GameObject.FindGameObjectsWithTag ("Start");
 		creditObjects = GameObject.FindGameObjectsWithTag ("Credits");
 		settingObjects = GameObject.FindGameObjectsWithTag ("Settings");
 
+		// Load Main Menu screen first, not credits or settings screen (disables those objects)
 		Credits (false);
 		Settings (false);
+		startText.gameObject.SetActive (false);
 
 		// Background should be a circle
 		mapBorder = background.GetComponent<CircleCollider2D> ().radius * background.transform.localScale.x;
@@ -74,7 +82,7 @@ public class MainMenuController : MonoBehaviour
 	{
 		yield return new WaitForSeconds (5.0f);
 
-		startText.text = "Press Space to Start!";
+		startText.gameObject.SetActive (true);
 
 	}
 
@@ -141,9 +149,12 @@ public class MainMenuController : MonoBehaviour
 
 			// Select a new random spawn point if this one is too near the player or the edge of the map (includes the size of the enemy)
 		} while (!mapCheck);
+			
+		// Randomly generate the rotation of the enemy
+		Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
 
 		// Generate the enemy and set its position, scale (rotation is 0), and mass automatically as based on density
-		GenerateEnemy (enemyPosition, Quaternion.identity, enemyScale);
+		GenerateEnemy (enemyPosition, enemyRotation, enemyScale);
 	}
 
 	// Public function of generate enemy, allows for Mitosis in enemy controller calculation
@@ -167,6 +178,7 @@ public class MainMenuController : MonoBehaviour
 		DebugLogEnemies ();
 	}
 
+	// Destroy an enemy and count them to ensure the max enemy limit is never exceeded
 	public void EnemyDestroyed ()
 	{
 		enemyCounter--;
@@ -194,7 +206,8 @@ public class MainMenuController : MonoBehaviour
 			"Winner Area Before: " + sourceArea + "\n" + "Loser Area: " + targetArea + "\n" + "Winner Area After: " + totalArea + "\n" + "Winner Radius After: " + newRadius);
 	}
 
-	// Toggle whether to show the main menu screen or the credits screen based on user input (click on credits button), requires that all elements start as active so they can be found and toggled
+	// Toggle whether to show the main menu screen or the credits screen based on user input (click on credits button)
+	// Requires that all elements start as active so they can be found and toggled
 	public void Credits (bool displayCredits)
 	{
 		if (debugUI)
@@ -221,6 +234,8 @@ public class MainMenuController : MonoBehaviour
 		}
 	}
 
+	// Go to the settings page by deactivating non-settings objects and activating settings objects or vice versa for leaving settings
+	// Requires that all elements start as active so they can be found and toggled
 	public void Settings (bool displaySettings)
 	{
 		if (debugUI)
@@ -247,6 +262,7 @@ public class MainMenuController : MonoBehaviour
 		}
 	}
 
+	// To be used to reset the high score to zero, informs the player that their high score is now 0 after having been overwritten
 	public void ResetHighScore ()
 	{
 		if (debugUI)
@@ -254,13 +270,38 @@ public class MainMenuController : MonoBehaviour
 
 		PlayerPrefs.SetFloat ("High Score", 0.0f);
 		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
-		highScoreText.text = "";
-		highScoreText.gameObject.SetActive (false);
+		highScoreText.text = "High Score: 0";
+		highScoreText.GetComponentInChildren<Button> ().gameObject.SetActive (false);
 	}
 
+	// Exit the game (only to be used for Windows applications)
 	public void ExitGame ()
 	{
 		Application.Quit ();
 	}
-		
+
+	// Ensure that the master volume matches the slider value as a percentage on the listener, in the player preferences, and in the UI
+	private void VolumeStart()
+	{
+		volume = PlayerPrefs.GetFloat("Volume", 0.5f);
+
+		if (debugSound)
+			Debug.Log ("Initialized Sound Level: " + volume + "\n");
+
+		volumeSlider.GetComponent<Slider> ().value = volume;
+		AudioListener.volume = volume;
+	}
+
+	// Change master volume according to slider adjusted by player in settings screen
+	public void Volume()
+	{
+		volume = volumeSlider.GetComponent<Slider> ().value;
+		PlayerPrefs.SetFloat ("Volume", volume);
+
+		if (debugSound)
+			Debug.Log ("Volume Updated" + "\n" + "From Volume: " + AudioListener.volume + "\n" + "To Volume: " + volume);
+
+		AudioListener.volume = volume;
+	}
+
 }

@@ -160,6 +160,8 @@ public class GameController : MonoBehaviour
 				continue;
 			}
 			/*
+			 * Checking for enemy distance was too heavy on processing per frame and caused severe lag, removed since out of player scope more often than not
+			 * 
 			float spawnToEnemyDistance;
 			if (enemies.Length <= 0 || enemies == null)
 				enemyCheck = true;
@@ -205,8 +207,12 @@ public class GameController : MonoBehaviour
 			ScoreIncrease (player.GetComponent<Rigidbody2D> ().mass / 100.0f);
 			GameOver ();
 			gameOverText.text = "You Win!";
-		} else
-			GenerateEnemy (enemyPosition, Quaternion.identity, enemyScale);
+		} else {
+			// Randomly generate the rotation of the enemy
+			Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
+
+			GenerateEnemy (enemyPosition, enemyRotation, enemyScale);
+		}
 	}
 
 	// Create a publicly accessible function (for enemy Mitosis) that spawns an enemy
@@ -230,6 +236,7 @@ public class GameController : MonoBehaviour
 		DebugLogEnemies ();
 	}
 
+	// Control enemy counter to ensure that spawn count maximum is never exceeded
 	public void EnemyDestroyed ()
 	{
 		enemyCounter--;
@@ -249,6 +256,10 @@ public class GameController : MonoBehaviour
 			if (Input.GetKeyDown (KeyCode.Return))
 				SceneManager.LoadScene ("MainMenu");
 		}
+
+		// If escape is pressed at any time, return to main menu
+		if (Input.GetKeyDown (KeyCode.Escape))
+			SceneManager.LoadScene ("MainMenu");
 
 		NewHighScore ();
 	}
