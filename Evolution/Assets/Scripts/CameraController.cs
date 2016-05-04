@@ -39,7 +39,7 @@ public class CameraController : MonoBehaviour
 	// Zoom out smoothly proportional to size using linear interpolation when the player changes in size
 	void Zoom ()
 	{
-		offset.z = Mathf.Lerp (offset.z, Mathf.Sqrt (player.transform.localScale.x) * -10.0f, Time.deltaTime * zoomSmooth);
+		offset.z = Mathf.Lerp (offset.z, Mathf.Sqrt (player.transform.localScale.x) * -25.0f, Time.deltaTime * zoomSmooth);
 		transform.position = player.transform.position + offset;
 	}
 }
