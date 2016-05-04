@@ -45,12 +45,13 @@ public class PlayerController : MonoBehaviour
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		float moveVertical = Input.GetAxis ("Vertical");
 
-		Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
+		Vector3 movement = new Vector3 (moveHorizontal, moveVertical);
 
 		// Deemed as a good smooth function from low mass to high mass to represent the force applied for speed
 		float speed = Mathf.Pow (rbody.mass, (2.0f / 3.0f));
 
 		rbody.AddForce (speedFactor * speed * movement);
+		rbody.AddTorque ((moveHorizontal + moveVertical) / (speed * speedFactor));
 
 		if (debug) {
 			if (moveHorizontal != 0.0f)

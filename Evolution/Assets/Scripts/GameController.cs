@@ -16,7 +16,6 @@ public class GameController : MonoBehaviour
 	public float enemyScaleMin = 0.01f;
 	public float enemyScaleMax = 3.0f;
 	public float winSizeAsPercent = 0.5f;
-	public bool clearHighScore = false;
 
 	public Text gameOverText;
 	public Text restartText;
@@ -40,9 +39,6 @@ public class GameController : MonoBehaviour
 	void Start ()
 	{
 		score = 0;
-
-		if (clearHighScore)
-			PlayerPrefs.SetFloat ("High Score", 0.0f);
 
 		flashHighScore = false;
 		newHighScore.text = "";

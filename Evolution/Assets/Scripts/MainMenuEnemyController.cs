@@ -144,8 +144,11 @@ public class MainMenuEnemyController : MonoBehaviour
 		// Set the spawn origin and radius (their spawn zone is a circle) for the two cells as the middle of the enemy before it is split
 		Vector3 spawnOrigin = transform.position;
 
-		float newScale = gameObject.GetComponent<CircleCollider2D> ().radius * transform.localScale.x;
-		float spawnDistance = newScale / 2.0f;
+		float area = Mathf.PI * Mathf.Pow (transform.localScale.x, 2.0f) * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f);
+		float newArea = area / 2.0f;
+		float newScale = Mathf.Sqrt(newArea / (Mathf.PI * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f)));
+
+		float spawnDistance = newScale * GetComponent<CircleCollider2D> ().radius / 2.0f;
 		Vector3 newScaleVector = new Vector3 (newScale, newScale);
 
 		// Randomly choose where to spawn inside the old enemy's radius, choose the exact opposite way for the second spawn
@@ -156,9 +159,12 @@ public class MainMenuEnemyController : MonoBehaviour
 		// Shrink the original before deleting it or spawning others so there are not any race conditions or collisions happening
 		transform.localScale = new Vector3 (gameController.enemyScaleMin / 100.0f, gameController.enemyScaleMin / 100.0f);
 
+		// Randomize enemy rotation orientation
+		Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f));
+
 		// Generate the two enemies (simulating a mitosis split) and delete the old one
-		gameController.GenerateEnemy (spawnOrigin + firstVector3, Quaternion.identity, newScaleVector);
-		gameController.GenerateEnemy (spawnOrigin + secondVector3, Quaternion.identity, newScaleVector);
+		gameController.GenerateEnemy (spawnOrigin + firstVector3, enemyRotation, newScaleVector);
+		gameController.GenerateEnemy (spawnOrigin + secondVector3, enemyRotation, newScaleVector);
 		gameController.EnemyDestroyed ();
 		Destroy (gameObject);
 	}
