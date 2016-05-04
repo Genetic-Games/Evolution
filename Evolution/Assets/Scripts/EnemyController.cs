@@ -11,12 +11,15 @@ public class EnemyController : MonoBehaviour
 	public float randomMitosisChance = 1.0f;
 	//public float growthMin = 0.0001f;
 	//public float growthMax = 0.0005f;
-	public AudioSource eat;
+	public AudioSource sound;
+	public AudioClip split;
+	public AudioClip eat;
 
 	public bool debug = true;
 	//public bool debugGrowth = false;
 	//public bool debugMovement = false;
 	//public bool debugCollision = true;
+	public bool debugAudio = true;
 
 	private bool mitosisAllowed;
 	private GameObject player;
@@ -198,8 +201,13 @@ public class EnemyController : MonoBehaviour
 					gameController.EnemyDestroyed ();
 
 					// Play eating sound only if the enemies are seen in a camera
-					if (gameObject.GetComponent<Renderer> ().isVisible || other.gameObject.GetComponent<Renderer> ().isVisible)
-						eat.Play ();
+					if (gameObject.GetComponent<Renderer> ().isVisible || other.gameObject.GetComponent<Renderer> ().isVisible) {
+						sound.clip = eat;
+						sound.Play ();
+
+						if (debugAudio)
+							Debug.Log ("Enemy: " + gameObject + "\n" + "Enemy Sound: " + sound.clip.name + "\n" + "Playing: " + sound.isPlaying);
+					}
 
 					Destroy (other.gameObject);
 
@@ -225,7 +233,7 @@ public class EnemyController : MonoBehaviour
 		float newArea = area / 2.0f;
 		float newScale = Mathf.Sqrt(newArea / (Mathf.PI * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f)));
 
-		float spawnDistance = newScale * GetComponent<CircleCollider2D> ().radius / 2.0f;
+		float spawnDistance = newScale * GetComponent<CircleCollider2D> ().radius / Mathf.Sqrt(2.0f);
 		Vector3 newScaleVector = new Vector3 (newScale, newScale);
 
 		// Randomly choose where to spawn inside the old enemy's radius, choose the exact opposite way for the second spawn
@@ -233,16 +241,35 @@ public class EnemyController : MonoBehaviour
 		Vector3 firstVector3 = new Vector3 (firstVector.x, firstVector.y);
 		Vector3 secondVector3 = new Vector3 (firstVector.x * -1.0f, firstVector.y * -1.0f);
 
-		// Shrink the original before deleting it or spawning others so there are not any race conditions or collisions happening
-		transform.localScale = new Vector3 (gameController.enemyScaleMin / 100.0f, gameController.enemyScaleMin / 100.0f);
+		// Hide the original and make sound before deleting it or spawning others so there are not any race conditions or collisions happening
+		GetComponent<CircleCollider2D> ().enabled = false;
+		StartCoroutine(PlayMitosis ());
 
 		// Randomize enemy rotation orientation
 		Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f));
 
-		// Generate the two enemies (simulating a mitosis split) and delete the old one
+		// Generate the two enemies (simulating a mitosis split) and delete the old one once the sound is complete
 		gameController.GenerateEnemy (spawnOrigin + firstVector3, enemyRotation, newScaleVector);
 		gameController.GenerateEnemy (spawnOrigin + secondVector3, enemyRotation, newScaleVector);
 		gameController.EnemyDestroyed ();
+	}
+
+	// Handle playing the mitosis sound before hiding and destroying the object
+	IEnumerator PlayMitosis()
+	{
+		if (gameObject.GetComponent<Renderer> ().isVisible) {
+			sound.clip = split;
+			sound.Play ();
+
+			// Disable the image once the sound starts playing
+			GetComponent<SpriteRenderer> ().enabled = false;
+
+			if (debugAudio)
+				Debug.Log ("Enemy: " + gameObject + "\n" + "Enemy Sound: " + sound.clip.name + "\n" + "Playing: " + sound.isPlaying);
+
+			yield return new WaitForSeconds (sound.clip.length);
+		}
+
 		Destroy (gameObject);
 	}
 }
