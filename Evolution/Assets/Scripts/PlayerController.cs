@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 		float speed = Mathf.Pow (rbody.mass, (2.0f / 3.0f));
 
 		rbody.AddForce (speedFactor * speed * movement);
-		rbody.AddTorque ((moveHorizontal + moveVertical) / (speed * speedFactor));
+		rbody.AddTorque (-1.0f * (moveHorizontal + moveVertical) / (speedFactor * rbody.mass));
 
 		if (debug) {
 			if (moveHorizontal != 0.0f)

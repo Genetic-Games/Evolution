@@ -172,6 +172,7 @@ public class EnemyController : MonoBehaviour
 
 		// If larger, move away, otherwise move towards
 		transform.position = Vector2.MoveTowards (transform.position, target.transform.position, (Time.deltaTime * speed * (moveTowards ? 1.0f : -1.0f)) / massSpeedFactor);
+		rbody.AddTorque ((moveTowards ? 1.0f : -1.0f) * UnityEngine.Random.value * speed / massSpeedFactor);
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
