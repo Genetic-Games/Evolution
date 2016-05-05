@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>Evolution_MacOSX</string>
+	<string>Evolution</string>
 	<key>CFBundleGetInfoString</key>
 	<string>Unity Player version 5.3.4f1 (fdbb5133b820). (c) 2015 Unity Technologies ApS. All rights reserved.</string>
 	<key>CFBundleIconFile</key>

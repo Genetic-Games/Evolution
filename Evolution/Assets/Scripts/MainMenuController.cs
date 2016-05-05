@@ -23,6 +23,10 @@ public class MainMenuController : MonoBehaviour
 	public bool debugUI = true;
 	public bool debugSound = true;
 
+	public Image easyButton;
+	public Image mediumButton;
+	public Image hardButton;
+
 	private GameObject[] startObjects;
 	private GameObject[] creditObjects;
 	private GameObject[] settingObjects;
@@ -32,6 +36,7 @@ public class MainMenuController : MonoBehaviour
 	private int count;
 	private int enemyCounter;
 	private float mapBorder;
+	private bool onMainMenu;
 
 	// Use this for initialization
 	void Start ()
@@ -40,6 +45,7 @@ public class MainMenuController : MonoBehaviour
 		VolumeStart ();
 
 		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
+		onMainMenu = true;
 
 		if (debug)
 			Debug.Log ("Current High Score: " + highScore);
@@ -57,6 +63,8 @@ public class MainMenuController : MonoBehaviour
 		startObjects = GameObject.FindGameObjectsWithTag ("Start");
 		creditObjects = GameObject.FindGameObjectsWithTag ("Credits");
 		settingObjects = GameObject.FindGameObjectsWithTag ("Settings");
+
+		Difficulty (PlayerPrefs.GetInt ("Difficulty", 2));
 
 		// Load Main Menu screen first, not credits or settings screen (disables those objects)
 		Credits (false);
@@ -82,7 +90,8 @@ public class MainMenuController : MonoBehaviour
 	{
 		yield return new WaitForSeconds (5.0f);
 
-		startText.gameObject.SetActive (true);
+		if (onMainMenu)
+			startText.gameObject.SetActive (true);
 
 	}
 
@@ -215,6 +224,8 @@ public class MainMenuController : MonoBehaviour
 
 		if (displayCredits) {
 
+			onMainMenu = false;
+
 			foreach (GameObject s in startObjects)
 				s.SetActive (false);
 
@@ -222,6 +233,8 @@ public class MainMenuController : MonoBehaviour
 				c.SetActive (true);
 
 		} else {
+
+			onMainMenu = true;
 
 			foreach (GameObject c in creditObjects)
 				c.SetActive (false);
@@ -243,6 +256,8 @@ public class MainMenuController : MonoBehaviour
 
 		if (displaySettings) {
 
+			onMainMenu = false;
+
 			foreach (GameObject s in startObjects)
 				s.SetActive (false);
 
@@ -250,6 +265,8 @@ public class MainMenuController : MonoBehaviour
 				e.SetActive (true);
 		
 		} else {
+
+			onMainMenu = true;
 
 			foreach (GameObject e in settingObjects)
 				e.SetActive (false);
@@ -302,6 +319,29 @@ public class MainMenuController : MonoBehaviour
 			Debug.Log ("Volume Updated" + "\n" + "From Volume: " + AudioListener.volume + "\n" + "To Volume: " + volume);
 
 		AudioListener.volume = volume;
+	}
+
+	// Change difficulty levels on the main menu screen effecting score multiplier, requires three difficulty buttons with tags
+	public void Difficulty(int level)
+	{
+		if (debug)
+			Debug.Log ("Previous Difficulty Level: " + PlayerPrefs.GetInt ("Difficulty") + "\n" + "New Difficulty Level: " + level);
+
+		PlayerPrefs.SetInt ("Difficulty", level);
+
+		if (level == 1) {
+			easyButton.color = Color.white;
+			mediumButton.color = Color.gray;
+			hardButton.color = Color.gray;
+		} else if (level == 3) {
+			easyButton.color = Color.gray;
+			mediumButton.color = Color.gray;
+			hardButton.color = Color.white;
+		} else {
+			easyButton.color = Color.gray;
+			mediumButton.color = Color.white;
+			hardButton.color = Color.gray;
+		}			
 	}
 
 }

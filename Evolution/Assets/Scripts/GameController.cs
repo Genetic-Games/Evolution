@@ -34,6 +34,7 @@ public class GameController : MonoBehaviour
 	private int enemyCounter;
 	private float mapBorder;
 	private bool flashHighScore;
+	private float scoreMultiplier;
 
 	// Use this for initialization
 	void Start ()
@@ -45,6 +46,8 @@ public class GameController : MonoBehaviour
 		highScore = PlayerPrefs.GetFloat ("High Score", 0.0f);
 		gameOverText.text = restartText.text = scoreText.text = "";
 		scoreText.text = "Score: " + score;
+
+		Difficulty ();
 
 		if (debug)
 			Debug.Log ("Current High Score: " + highScore);
@@ -71,6 +74,30 @@ public class GameController : MonoBehaviour
 		DebugLogEnemies ();
 
 		StartCoroutine (spawnEnemies ());
+	}
+
+	// Control parameters for enemy scale, number of enemies, and score multiplier based on difficulty specified on main menu screen
+	void Difficulty()
+	{
+		int difficulty = PlayerPrefs.GetInt ("Difficulty", 2);
+
+		if (difficulty == 1) {
+			enemyStart = 50;
+			enemyMax = 500;
+			enemyScaleMax = 0.3f;
+			scoreMultiplier = 0.5f;
+
+		} else if (difficulty == 3) {
+			enemyStart = 200;
+			enemyMax = 2000;
+			enemyScaleMax = 0.7f;
+			scoreMultiplier = 2.0f;
+		} else {
+			enemyStart = 100;
+			enemyMax = 1000;
+			enemyScaleMax = 0.5f;
+			scoreMultiplier = 1.0f;
+		}
 	}
 
 	/*
@@ -335,7 +362,7 @@ public class GameController : MonoBehaviour
 		if (debug)
 			Debug.Log ("Score Increase" + "\n" + "Previous Score: " + score + "\n" + "Increase: " + Mathf.Round (val));
 
-		score += Mathf.Round (val);
+		score += Mathf.Round (scoreMultiplier * val);
 		scoreText.text = "Score: " + score;
 	}
 
