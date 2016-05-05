@@ -8,8 +8,10 @@ public class MainMenuEnemyController : MonoBehaviour
 	public float speedMax = 10.0f;
 	public float massLimit = 100.0f;
 	public float randomMitosisChance = 1.0f;
+	public int lifetime = 10000;
 
 	public bool debug = false;
+	public bool debugLifetime = true;
 
 	private Rigidbody2D rbody;
 	private float speed;
@@ -17,6 +19,7 @@ public class MainMenuEnemyController : MonoBehaviour
 	private Vector3 origin = new Vector3 (0.0f, 0.0f);
 	private MainMenuController gameController;
 	private GameObject background;
+	private int lifetimeCounter = 0;
 
 	// Use this for initialization, determine enemy growth factor and speed factor
 	void Start ()
@@ -37,6 +40,8 @@ public class MainMenuEnemyController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		lifetimeCounter++;
+
 		MoveBasedOnTarget ();
 
 		// Ensure that no one leaves the boundary and if they do, they are destroyed
@@ -48,6 +53,15 @@ public class MainMenuEnemyController : MonoBehaviour
 		// Perform Mitosis (splitting of cells) randomly above a minimum size and once a maximum size is reached
 		if (rbody.mass > massLimit || (UnityEngine.Random.Range (0.0f, 100.0f) <= randomMitosisChance && transform.localScale.x > gameController.enemyScaleMin))
 			Mitosis ();
+
+		if (lifetimeCounter == lifetime) {
+
+			if (debugLifetime)
+				Debug.Log ("Enemy: " + gameObject.name + " reached lifetime limit.");
+
+			gameController.EnemyDestroyed ();
+			Destroy (gameObject);
+		}
 	}
 
 	void MoveBasedOnTarget ()
