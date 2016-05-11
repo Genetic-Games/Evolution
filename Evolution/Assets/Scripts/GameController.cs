@@ -16,12 +16,14 @@ public class GameController : MonoBehaviour
 	public float enemyScaleMin = 0.01f;
 	public float enemyScaleMax = 3.0f;
 	public float winSizeAsPercent = 0.5f;
+	public bool paused = false;
 
 	public Text gameOverText;
 	public Text restartText;
 	public Text scoreText;
 	public Text highScoreText;
 	public Text newHighScore;
+	public Text pauseText;
 
 	public bool debug = false;
 
@@ -77,7 +79,7 @@ public class GameController : MonoBehaviour
 	}
 
 	// Control parameters for enemy scale, number of enemies, and score multiplier based on difficulty specified on main menu screen
-	void Difficulty()
+	void Difficulty ()
 	{
 		int difficulty = PlayerPrefs.GetInt ("Difficulty", 2);
 
@@ -127,7 +129,7 @@ public class GameController : MonoBehaviour
 
 			yield return new WaitForSeconds (waitSpawnTime);
 
-			if (enemyCounter < enemyMax)
+			if (!paused && enemyCounter < enemyMax)
 				RandomlyGenerateEnemy ();
 
 			if (gameOver)
@@ -232,7 +234,7 @@ public class GameController : MonoBehaviour
 			gameOverText.text = "You Win!";
 		} else {
 			// Randomly generate the rotation of the enemy
-			Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
+			Quaternion enemyRotation = Quaternion.Euler (0.0f, 0.0f, Random.Range (0.0f, 360.0f));
 
 			GenerateEnemy (enemyPosition, enemyRotation, enemyScale);
 		}
@@ -280,9 +282,9 @@ public class GameController : MonoBehaviour
 				SceneManager.LoadScene ("MainMenu");
 		}
 
-		// If escape is pressed at any time, return to main menu
-		if (Input.GetKeyDown (KeyCode.Escape))
-			SceneManager.LoadScene ("MainMenu");
+		// If escape is pressed at any time other than during game over, toggle game pause
+		if (!gameOver && Input.GetKeyDown (KeyCode.Escape))
+			TogglePause ();
 
 		NewHighScore ();
 	}
@@ -376,5 +378,26 @@ public class GameController : MonoBehaviour
 			return true;
 		else
 			return false;
+	}
+
+	// Toggle the pause of the game, display pause text
+	public void TogglePause ()
+	{
+		paused = !paused;
+		pauseText.gameObject.SetActive (paused);
+
+		if (paused) {
+			Time.timeScale = 0.0f;
+			AudioListener.pause = true;
+
+			if (debug)
+				Debug.Log ("Game is now paused");
+		} else {
+			Time.timeScale = 1.0f;
+			AudioListener.pause = false;
+
+			if (debug)
+				Debug.Log ("Game is now unpaused");
+		}
 	}
 }

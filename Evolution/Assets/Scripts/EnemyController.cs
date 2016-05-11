@@ -84,7 +84,7 @@ public class EnemyController : MonoBehaviour
 		bool randomMitosis = UnityEngine.Random.Range (0.0f, 100.0f) <= randomMitosisChance;
 		bool aboveMinScale = transform.localScale.x > gameController.enemyScaleMin;
 
-		if (mitosisAllowed && (aboveMaxMass || (randomMitosis && aboveMinScale)))
+		if (!gameController.paused && mitosisAllowed && (aboveMaxMass || (randomMitosis && aboveMinScale)))
 			Mitosis ();
 	}
 
@@ -172,10 +172,14 @@ public class EnemyController : MonoBehaviour
 
 		float massSpeedFactor = Mathf.Log (rbody.mass) + 2.5f;
 
-
-		// If larger, move away, otherwise move towards
-		transform.position = Vector2.MoveTowards (transform.position, target.transform.position, (Time.deltaTime * speed * (moveTowards ? 1.0f : -1.0f)) / massSpeedFactor);
-		rbody.AddTorque ((moveTowards ? 1.0f : -1.0f) * UnityEngine.Random.value * speed / massSpeedFactor);
+		// If larger, move away, otherwise move towards with random spin for each direction, unless game is paused
+		if (!gameController.paused) {
+			rbody.WakeUp ();
+			transform.position = Vector2.MoveTowards (transform.position, target.transform.position, (Time.deltaTime * speed * (moveTowards ? 1.0f : -1.0f)) / massSpeedFactor);
+			rbody.AddTorque ((moveTowards ? 1.0f : -1.0f) * UnityEngine.Random.value * speed / massSpeedFactor);
+		} else
+			rbody.Sleep ();
+		
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
@@ -231,9 +235,9 @@ public class EnemyController : MonoBehaviour
 
 		float area = Mathf.PI * Mathf.Pow (transform.localScale.x, 2.0f) * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f);
 		float newArea = area / 2.0f;
-		float newScale = Mathf.Sqrt(newArea / (Mathf.PI * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f)));
+		float newScale = Mathf.Sqrt (newArea / (Mathf.PI * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f)));
 
-		float spawnDistance = newScale * GetComponent<CircleCollider2D> ().radius / Mathf.Sqrt(2.0f);
+		float spawnDistance = newScale * GetComponent<CircleCollider2D> ().radius / Mathf.Sqrt (2.0f);
 		Vector3 newScaleVector = new Vector3 (newScale, newScale);
 
 		// Randomly choose where to spawn inside the old enemy's radius, choose the exact opposite way for the second spawn
@@ -243,10 +247,10 @@ public class EnemyController : MonoBehaviour
 
 		// Hide the original and make sound before deleting it or spawning others so there are not any race conditions or collisions happening
 		GetComponent<CircleCollider2D> ().enabled = false;
-		StartCoroutine(PlayMitosis ());
+		StartCoroutine (PlayMitosis ());
 
 		// Randomize enemy rotation orientation
-		Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f));
+		Quaternion enemyRotation = Quaternion.Euler (0.0f, 0.0f, UnityEngine.Random.Range (0.0f, 360.0f));
 
 		// Generate the two enemies (simulating a mitosis split) and delete the old one once the sound is complete
 		gameController.GenerateEnemy (spawnOrigin + firstVector3, enemyRotation, newScaleVector);
@@ -255,7 +259,7 @@ public class EnemyController : MonoBehaviour
 	}
 
 	// Handle playing the mitosis sound before hiding and destroying the object
-	IEnumerator PlayMitosis()
+	IEnumerator PlayMitosis ()
 	{
 		if (gameObject.GetComponent<Renderer> ().isVisible) {
 			sound.clip = split;

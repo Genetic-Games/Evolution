@@ -50,8 +50,13 @@ public class PlayerController : MonoBehaviour
 		// Deemed as a good smooth function from low mass to high mass to represent the force applied for speed
 		float speed = Mathf.Pow (rbody.mass, (2.0f / 3.0f));
 
-		rbody.AddForce (speedFactor * speed * movement);
-		rbody.AddTorque (-1.0f * (moveHorizontal + moveVertical) / (speedFactor * rbody.mass));
+		if (!gameController.paused) {
+			rbody.WakeUp ();
+			rbody.AddForce (speedFactor * speed * movement);
+			rbody.AddTorque (-1.0f * (moveHorizontal + moveVertical) / (speedFactor * rbody.mass));
+		} else {
+			rbody.Sleep ();
+		}
 
 		if (debug) {
 			if (moveHorizontal != 0.0f)

@@ -6,7 +6,6 @@ public class MainMenuEnemyController : MonoBehaviour
 {
 	public float speedMin = 1.0f;
 	public float speedMax = 10.0f;
-	public float massLimit = 100.0f;
 	public float randomMitosisChance = 1.0f;
 	public int lifetime = 10000;
 
@@ -51,7 +50,7 @@ public class MainMenuEnemyController : MonoBehaviour
 		}
 
 		// Perform Mitosis (splitting of cells) randomly above a minimum size and once a maximum size is reached
-		if (rbody.mass > massLimit || (UnityEngine.Random.Range (0.0f, 100.0f) <= randomMitosisChance && transform.localScale.x > gameController.enemyScaleMin))
+		if (UnityEngine.Random.Range (0.0f, 100.0f) <= randomMitosisChance && transform.localScale.x > gameController.enemyScaleMin)
 			Mitosis ();
 
 		if (lifetimeCounter == lifetime) {
@@ -160,7 +159,7 @@ public class MainMenuEnemyController : MonoBehaviour
 
 		float area = Mathf.PI * Mathf.Pow (transform.localScale.x, 2.0f) * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f);
 		float newArea = area / 2.0f;
-		float newScale = Mathf.Sqrt(newArea / (Mathf.PI * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f)));
+		float newScale = Mathf.Sqrt (newArea / (Mathf.PI * Mathf.Pow (GetComponent<CircleCollider2D> ().radius, 2.0f)));
 
 		float spawnDistance = newScale * GetComponent<CircleCollider2D> ().radius / 2.0f;
 		Vector3 newScaleVector = new Vector3 (newScale, newScale);
@@ -174,7 +173,7 @@ public class MainMenuEnemyController : MonoBehaviour
 		transform.localScale = new Vector3 (gameController.enemyScaleMin / 100.0f, gameController.enemyScaleMin / 100.0f);
 
 		// Randomize enemy rotation orientation
-		Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, UnityEngine.Random.Range(0.0f, 360.0f));
+		Quaternion enemyRotation = Quaternion.Euler (0.0f, 0.0f, UnityEngine.Random.Range (0.0f, 360.0f));
 
 		// Generate the two enemies (simulating a mitosis split) and delete the old one
 		gameController.GenerateEnemy (spawnOrigin + firstVector3, enemyRotation, newScaleVector);

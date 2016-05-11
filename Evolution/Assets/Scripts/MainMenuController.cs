@@ -160,7 +160,7 @@ public class MainMenuController : MonoBehaviour
 		} while (!mapCheck);
 			
 		// Randomly generate the rotation of the enemy
-		Quaternion enemyRotation = Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f));
+		Quaternion enemyRotation = Quaternion.Euler (0.0f, 0.0f, Random.Range (0.0f, 360.0f));
 
 		// Generate the enemy and set its position, scale (rotation is 0), and mass automatically as based on density
 		GenerateEnemy (enemyPosition, enemyRotation, enemyScale);
@@ -298,9 +298,9 @@ public class MainMenuController : MonoBehaviour
 	}
 
 	// Ensure that the master volume matches the slider value as a percentage on the listener, in the player preferences, and in the UI
-	private void VolumeStart()
+	private void VolumeStart ()
 	{
-		volume = PlayerPrefs.GetFloat("Volume", 0.5f);
+		volume = PlayerPrefs.GetFloat ("Volume", 0.5f);
 
 		if (debugSound)
 			Debug.Log ("Initialized Sound Level: " + volume + "\n");
@@ -310,7 +310,7 @@ public class MainMenuController : MonoBehaviour
 	}
 
 	// Change master volume according to slider adjusted by player in settings screen
-	public void Volume()
+	public void Volume ()
 	{
 		volume = volumeSlider.GetComponent<Slider> ().value;
 		PlayerPrefs.SetFloat ("Volume", volume);
@@ -322,7 +322,7 @@ public class MainMenuController : MonoBehaviour
 	}
 
 	// Change difficulty levels on the main menu screen effecting score multiplier, requires three difficulty buttons with tags
-	public void Difficulty(int level)
+	public void Difficulty (int level)
 	{
 		if (debug)
 			Debug.Log ("Previous Difficulty Level: " + PlayerPrefs.GetInt ("Difficulty") + "\n" + "New Difficulty Level: " + level);
