@@ -1,0 +1,1433 @@
+Initialize engine version: 5.3.4f1 (fdbb5133b820)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 965M            (ID=0x1427)
+    Vendor:   NVIDIA
+    VRAM:     1969 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.045 seconds
+Platform assembly: C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Ian\Documents\Repositories\evolution\Evolution\Builds\Windows_x86_64\Evolution_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.750216 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.230714 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 519.
+Total: 0.493823 ms (FindLiveObjects: 0.077431 ms CreateObjectMapping: 0.022913 ms MarkObjects: 0.385182 ms  DeleteObjects: 0.006320 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.913923 ms
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.206615 ms (FindLiveObjects: 0.030419 ms CreateObjectMapping: 0.006320 ms MarkObjects: 0.153677 ms  DeleteObjects: 0.015012 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.001078 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.199504 ms (FindLiveObjects: 0.016987 ms CreateObjectMapping: 0.005925 ms MarkObjects: 0.172640 ms  DeleteObjects: 0.003160 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.876635 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.251652 ms (FindLiveObjects: 0.023308 ms CreateObjectMapping: 0.006320 ms MarkObjects: 0.218467 ms  DeleteObjects: 0.002765 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.919301 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.316837 ms (FindLiveObjects: 0.028839 ms CreateObjectMapping: 0.009481 ms MarkObjects: 0.273380 ms  DeleteObjects: 0.003555 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.900338 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.327898 ms (FindLiveObjects: 0.040691 ms CreateObjectMapping: 0.010271 ms MarkObjects: 0.269825 ms  DeleteObjects: 0.005925 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.888487 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.345281 ms (FindLiveObjects: 0.037135 ms CreateObjectMapping: 0.007506 ms MarkObjects: 0.293923 ms  DeleteObjects: 0.005135 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.907054 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.308145 ms (FindLiveObjects: 0.017382 ms CreateObjectMapping: 0.006320 ms MarkObjects: 0.277331 ms  DeleteObjects: 0.006320 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.267348 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.284442 ms (FindLiveObjects: 0.023308 ms CreateObjectMapping: 0.006320 ms MarkObjects: 0.248096 ms  DeleteObjects: 0.005530 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.768389 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.275751 ms (FindLiveObjects: 0.017382 ms CreateObjectMapping: 0.005530 ms MarkObjects: 0.244541 ms  DeleteObjects: 0.007111 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.878610 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 239.
+Total: 0.332244 ms (FindLiveObjects: 0.020938 ms CreateObjectMapping: 0.006320 ms MarkObjects: 0.300244 ms  DeleteObjects: 0.003555 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at EnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Can not play a disabled audio source
+ 
+(Filename:  Line: 436)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.705574 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 521.
+Total: 0.682266 ms (FindLiveObjects: 0.048987 ms CreateObjectMapping: 0.012641 ms MarkObjects: 0.594958 ms  DeleteObjects: 0.024098 ms)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Enemy Spawn Exception: System.NullReferenceException: Object reference not set to an instance of an object
+  at MainMenuEnemyController.OnCollisionEnter2D (UnityEngine.Collision2D other) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1f68 -> priority: 1 
+  Thread -> id: 370 -> priority: 1 
