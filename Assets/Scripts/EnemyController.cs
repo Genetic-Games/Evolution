@@ -199,7 +199,7 @@ public class EnemyController : MonoBehaviour
 
 			try {
 				// If enemy has higher mass (and thus size) than other enemy, grow enemy and destroy other enemy
-				if (rbody.mass > other.gameObject.GetComponent<Rigidbody2D> ().mass) {
+				if (rbody != null && rbody.mass > other.gameObject.GetComponent<Rigidbody2D> ().mass) {
 
 					gameController.AbsorbGrowth (gameObject, other.gameObject);
 					gameController.EnemyDestroyed ();
@@ -207,7 +207,10 @@ public class EnemyController : MonoBehaviour
 					// Play eating sound only if the enemies are seen in a camera
 					if (gameObject.GetComponent<Renderer> ().isVisible || other.gameObject.GetComponent<Renderer> ().isVisible) {
 						sound.clip = eat;
-						sound.Play ();
+						if (sound.enabled)
+						{
+							sound.Play();
+						}
 
 						if (debugAudio)
 							Debug.Log ("Enemy: " + gameObject + "\n" + "Enemy Sound: " + sound.clip.name + "\n" + "Playing: " + sound.isPlaying);
@@ -263,7 +266,10 @@ public class EnemyController : MonoBehaviour
 	{
 		if (gameObject.GetComponent<Renderer> ().isVisible) {
 			sound.clip = split;
-			sound.Play ();
+			if (sound.enabled)
+			{
+				sound.Play();
+			}
 
 			// Disable the image once the sound starts playing
 			GetComponent<SpriteRenderer> ().enabled = false;
