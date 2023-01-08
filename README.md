@@ -6,4 +6,4 @@ This top-down 2D single player game puts you in the driver seat behind a single 
 
 Try your hand at Evolution today and grow to become a legend larger than life, and maybe even bigger than Charles Darwin himself!
 
-Play here - http://geneticgames.org/Evolution
+Play here - https://geneticgames.org/Evolution
